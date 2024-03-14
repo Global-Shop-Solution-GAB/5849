@@ -1,0 +1,2439 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmMain..Create(BaseForm)
+Gui.frmMain..Size(1016,714)
+Gui.frmMain..MinX(1016)
+Gui.frmMain..MinY(696)
+Gui.frmMain..Position(0,0)
+Gui.frmMain..BackColor(-2147483633)
+Gui.frmMain..MousePointer(0)
+Gui.frmMain..Event(UnLoad,frmMain_UnLoad)
+Gui.frmMain..Caption("Machine Dashboard")
+Gui.frmMain..AlwaysOnTop(False)
+Gui.frmMain..FontName("Tahoma")
+Gui.frmMain..FontSize(8.25)
+Gui.frmMain..ControlBox(True)
+Gui.frmMain..MaxButton(True)
+Gui.frmMain..MinButton(True)
+Gui.frmMain..Moveable(True)
+Gui.frmMain..Sizeable(True)
+Gui.frmMain..ShowInTaskBar(True)
+Gui.frmMain..TitleBar(True)
+Gui.frmMain.tabTabs.Create(Tab)
+Gui.frmMain.tabTabs.Size(1008,601)
+Gui.frmMain.tabTabs.Position(1,77)
+Gui.frmMain.tabTabs.Enabled(True)
+Gui.frmMain.tabTabs.Visible(True)
+Gui.frmMain.tabTabs.Zorder(0)
+Gui.frmMain.tabTabs.FontName("Tahoma")
+Gui.frmMain.tabTabs.FontSize(8.25)
+Gui.frmMain.tabTabs.Tabs(2)
+Gui.frmMain.tabTabs.SetTab(0)
+Gui.frmMain.tabTabs.Caption("Shakers")
+Gui.frmMain.tabTabs.SetTab(1)
+Gui.frmMain.tabTabs.Caption("Wind Machines")
+Gui.frmMain.GsGCWindMachines.Create(GsGridControl)
+Gui.frmMain.GsGCWindMachines.Enabled(True)
+Gui.frmMain.GsGCWindMachines.Visible(True)
+Gui.frmMain.GsGCWindMachines.Zorder(0)
+Gui.frmMain.GsGCWindMachines.Size(1006,572)
+Gui.frmMain.GsGCWindMachines.Position(0,0)
+Gui.frmMain.GsGCWindMachines.Parent("tabTabs",1)
+Gui.frmMain.GsGCWindMachines.Dock(5)
+Gui.frmMain.GsGCWindMachines.Event(RowCellClick,GsGCWindMachines_RowCellClick)
+Gui.frmMain.GsGCShakers.Create(GsGridControl)
+Gui.frmMain.GsGCShakers.Enabled(True)
+Gui.frmMain.GsGCShakers.Parent("tabTabs",0)
+Gui.frmMain.GsGCShakers.Visible(True)
+Gui.frmMain.GsGCShakers.Zorder(0)
+Gui.frmMain.GsGCShakers.Size(1006,572)
+Gui.frmMain.GsGCShakers.Position(0,0)
+Gui.frmMain.GsGCShakers.Dock(5)
+Gui.frmMain.GsGCShakers.Event(RowCellClick,GsGCShakers_RowCellClick)
+Gui.frmMain.lblStatus.Create(Label,"Loading Data...",False,72,14,0,100,11,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMain.lblStatus.BorderStyle(0)
+Gui.frmMain.pbStatus.Create(ProgressBar)
+Gui.frmMain.pbStatus.Size(162,17)
+Gui.frmMain.pbStatus.Position(100,26)
+Gui.frmMain.pbStatus.Visible(False)
+Gui.frmMain.framePermissions.Create(Frame)
+Gui.frmMain.framePermissions.Size(131,28)
+Gui.frmMain.framePermissions.Position(876,1)
+Gui.frmMain.framePermissions.Enabled(True)
+Gui.frmMain.framePermissions.Visible(False)
+Gui.frmMain.framePermissions.Zorder(0)
+Gui.frmMain.framePermissions.Caption("Permissions")
+Gui.frmMain.framePermissions.FontName("Tahoma")
+Gui.frmMain.framePermissions.FontSize(8.25)
+Gui.frmMain.optView.Create(Option)
+Gui.frmMain.optView.Enabled(True)
+Gui.frmMain.optView.Visible(True)
+Gui.frmMain.optView.Zorder(0)
+Gui.frmMain.optView.Size(48,24)
+Gui.frmMain.optView.Position(4,2)
+Gui.frmMain.optView.Caption("View")
+Gui.frmMain.optView.FontName("Tahoma")
+Gui.frmMain.optView.FontSize(8.25)
+Gui.frmMain.optView.Parent("framePermissions")
+Gui.frmMain.optView.Event(Click,optPermissions_Click)
+Gui.frmMain.optView.Value(True)
+Gui.frmMain.optView.DefaultValue(True)
+Gui.frmMain.optEdit.Create(Option)
+Gui.frmMain.optEdit.Enabled(True)
+Gui.frmMain.optEdit.Visible(True)
+Gui.frmMain.optEdit.Zorder(0)
+Gui.frmMain.optEdit.Size(55,24)
+Gui.frmMain.optEdit.Position(54,2)
+Gui.frmMain.optEdit.Caption("Edit")
+Gui.frmMain.optEdit.FontName("Tahoma")
+Gui.frmMain.optEdit.FontSize(8.25)
+Gui.frmMain.optEdit.Parent("framePermissions")
+Gui.frmMain.optEdit.Event(Click,optPermissions_Click)
+Gui.frmMain.picGSSLogo.Create(PictureBox)
+Gui.frmMain.picGSSLogo.Size(275,64)
+Gui.frmMain.picGSSLogo.Position(368,3)
+Gui.frmMain.picGSSLogo.Enabled(True)
+Gui.frmMain.picGSSLogo.Visible(True)
+Gui.frmMain.picGSSLogo.Zorder(0)
+Gui.frmShaker..Create(DashForm)
+Gui.frmShaker..Caption("Shaker Maintenance")
+Gui.frmShaker..Size(915,503)
+Gui.frmShaker..MinX(0)
+Gui.frmShaker..MinY(0)
+Gui.frmShaker..Position(0,0)
+Gui.frmShaker..AlwaysOnTop(False)
+Gui.frmShaker..FontName("Tahoma")
+Gui.frmShaker..FontSize(8.25)
+Gui.frmShaker..ControlBox(True)
+Gui.frmShaker..MaxButton(False)
+Gui.frmShaker..MinButton(False)
+Gui.frmShaker..MousePointer(0)
+Gui.frmShaker..Moveable(True)
+Gui.frmShaker..Sizeable(False)
+Gui.frmShaker..ShowInTaskBar(True)
+Gui.frmShaker..TitleBar(True)
+Gui.frmShaker..Event(UnLoad,frmShaker_UnLoad)
+Gui.frmShaker..BarSaveButton(True,False)
+Gui.frmShaker..Event(SaveButtonClick,frmShaker_SaveAllButtonClick)
+Gui.frmShaker.lbl1.Create(Label,"Machine ID",True,53,13,0,6,8,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl1.BorderStyle(0)
+Gui.frmShaker.lbl1.ControlGroup(10)
+Gui.frmShaker.txtMachineID.Create(TextBox,"",True,100,20,0,6,21,False,1,"Tahoma",8.25,,1)
+Gui.frmShaker.txtMachineID.Locked(True)
+Gui.frmShaker.txtMachineID.NumericOnly(2)
+Gui.frmShaker.txtMachineID.MaxLength(6)
+Gui.frmShaker.txtMachineID.ControlGroup(10)
+Gui.frmShaker.txtMachineID.DefaultValue("")
+Gui.frmShaker.lbl2.Create(Label,"Customer",True,46,13,0,6,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl2.BorderStyle(0)
+Gui.frmShaker.lbl2.ControlGroup(10)
+Gui.frmShaker.txtCustomer.Create(TextBox,"",True,100,20,0,6,63,False,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtCustomer.MaxLength(6)
+Gui.frmShaker.txtCustomer.ControlGroup(10)
+Gui.frmShaker.txtCustomer.DefaultValue("")
+Gui.frmShaker.lbl3.Create(Label,"Customer Name",True,76,13,0,6,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl3.BorderStyle(0)
+Gui.frmShaker.lbl3.ControlGroup(10)
+Gui.frmShaker.lbl4.Create(Label,"Grower",True,35,13,0,143,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl4.BorderStyle(0)
+Gui.frmShaker.lbl4.ControlGroup(10)
+Gui.frmShaker.lbl5.Create(Label,"Street",True,30,13,0,6,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl5.BorderStyle(0)
+Gui.frmShaker.lbl5.ControlGroup(10)
+Gui.frmShaker.lbl6.Create(Label,"City",True,19,13,0,6,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl6.BorderStyle(0)
+Gui.frmShaker.lbl6.ControlGroup(10)
+Gui.frmShaker.lbl7.Create(Label,"State",True,26,13,0,172,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl7.BorderStyle(0)
+Gui.frmShaker.lbl7.ControlGroup(10)
+Gui.frmShaker.lbl8.Create(Label,"Zip Code",True,42,13,0,282,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl8.BorderStyle(0)
+Gui.frmShaker.lbl8.ControlGroup(10)
+Gui.frmShaker.lbl9.Create(Label,"Phone Number",True,70,13,0,6,223,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl9.BorderStyle(0)
+Gui.frmShaker.lbl9.ControlGroup(10)
+Gui.frmShaker.lbl10.Create(Label,"Contract Number",True,82,13,0,428,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl10.BorderStyle(0)
+Gui.frmShaker.lbl10.ControlGroup(10)
+Gui.frmShaker.lbl11.Create(Label,"Tax Code",True,46,13,0,545,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl11.BorderStyle(0)
+Gui.frmShaker.lbl11.ControlGroup(10)
+Gui.frmShaker.lbl12.Create(Label,"Nut Type",True,44,13,0,428,223,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl12.BorderStyle(0)
+Gui.frmShaker.lbl12.ControlGroup(10)
+Gui.frmShaker.lbl13.Create(Label,"Machine Type",True,66,13,0,428,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl13.BorderStyle(0)
+Gui.frmShaker.lbl13.ControlGroup(10)
+Gui.frmShaker.lbl14.Create(Label,"Serviced",True,41,13,0,663,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl14.BorderStyle(0)
+Gui.frmShaker.lbl14.ControlGroup(10)
+Gui.frmShaker.lbl15.Create(Label,"Brand",True,28,13,0,663,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl15.BorderStyle(0)
+Gui.frmShaker.lbl15.ControlGroup(10)
+Gui.frmShaker.lbl16.Create(Label,"Tach Hours",True,54,13,0,545,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl16.BorderStyle(0)
+Gui.frmShaker.lbl16.ControlGroup(10)
+Gui.frmShaker.lbl17.Create(Label,"Machine Serial #",True,79,13,0,428,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl17.BorderStyle(0)
+Gui.frmShaker.lbl17.ControlGroup(10)
+Gui.frmShaker.lbl18.Create(Label,"Service Type",True,62,13,0,5000,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl18.BorderStyle(0)
+Gui.frmShaker.lbl18.ControlGroup(10)
+Gui.frmShaker.lbl19.Create(Label,"Engine Type",True,59,13,0,545,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl19.BorderStyle(0)
+Gui.frmShaker.lbl19.ControlGroup(10)
+Gui.frmShaker.lbl20.Create(Label,"Machine Use",True,60,13,0,5000,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl20.BorderStyle(0)
+Gui.frmShaker.lbl20.ControlGroup(10)
+Gui.frmShaker.lbl21.Create(Label,"Engine Serial #",True,72,13,0,545,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl21.BorderStyle(0)
+Gui.frmShaker.lbl21.ControlGroup(10)
+Gui.frmShaker.lbl22.Create(Label,"Service Contact Name",True,106,13,0,6,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl22.BorderStyle(0)
+Gui.frmShaker.lbl22.ControlGroup(10)
+Gui.frmShaker.lbl23.Create(Label,"Contact Street",True,71,13,0,6,308,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl23.BorderStyle(0)
+Gui.frmShaker.lbl23.ControlGroup(10)
+Gui.frmShaker.lbl24.Create(Label,"Contact City",True,60,13,0,6,351,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl24.BorderStyle(0)
+Gui.frmShaker.lbl24.ControlGroup(10)
+Gui.frmShaker.lbl25.Create(Label,"Contact State",True,67,13,0,172,351,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl25.BorderStyle(0)
+Gui.frmShaker.lbl25.ControlGroup(10)
+Gui.frmShaker.lbl26.Create(Label,"Contact Zip Code",True,83,13,0,282,351,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl26.BorderStyle(0)
+Gui.frmShaker.lbl26.ControlGroup(10)
+Gui.frmShaker.lbl27.Create(Label,"Service Contact Phone Number",True,149,13,0,6,394,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl27.BorderStyle(0)
+Gui.frmShaker.lbl27.ControlGroup(10)
+Gui.frmShaker.lbl32.Create(Label,"FWO Format",True,61,13,0,663,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl32.BorderStyle(0)
+Gui.frmShaker.lbl32.ControlGroup(10)
+Gui.frmShaker.txtCustomerName.Create(TextBox,"",True,300,20,0,6,106,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtCustomerName.MaxLength(30)
+Gui.frmShaker.txtCustomerName.TabStop(True)
+Gui.frmShaker.txtCustomerName.TabIndex(3)
+Gui.frmShaker.txtCustomerName.ControlGroup(10)
+Gui.frmShaker.txtCustomerName.DefaultValue("")
+Gui.frmShaker.txtStreetAddress.Create(TextBox,"",True,300,20,0,6,149,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtStreetAddress.MaxLength(30)
+Gui.frmShaker.txtStreetAddress.TabStop(True)
+Gui.frmShaker.txtStreetAddress.TabIndex(4)
+Gui.frmShaker.txtStreetAddress.ControlGroup(10)
+Gui.frmShaker.txtCity.Create(TextBox,"",True,150,20,0,6,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtCity.MaxLength(30)
+Gui.frmShaker.txtCity.TabStop(True)
+Gui.frmShaker.txtCity.TabIndex(5)
+Gui.frmShaker.txtCity.ControlGroup(10)
+Gui.frmShaker.txtZipCode.Create(TextBox,"",True,100,20,0,282,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtZipCode.MaxLength(5)
+Gui.frmShaker.txtZipCode.TabStop(True)
+Gui.frmShaker.txtZipCode.TabIndex(7)
+Gui.frmShaker.txtZipCode.ControlGroup(10)
+Gui.frmShaker.txtPhone.Create(TextBox,"",True,100,20,0,6,236,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtPhone.MaxLength(10)
+Gui.frmShaker.txtPhone.TabStop(True)
+Gui.frmShaker.txtPhone.TabIndex(8)
+Gui.frmShaker.txtPhone.ControlGroup(10)
+Gui.frmShaker.txtContactName.Create(TextBox,"",True,300,20,0,6,278,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContactName.MaxLength(30)
+Gui.frmShaker.txtContactName.TabStop(True)
+Gui.frmShaker.txtContactName.TabIndex(9)
+Gui.frmShaker.txtContactName.ControlGroup(10)
+Gui.frmShaker.txtContactStreet.Create(TextBox,"",True,300,20,0,6,321,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContactStreet.MaxLength(30)
+Gui.frmShaker.txtContactStreet.TabStop(True)
+Gui.frmShaker.txtContactStreet.TabIndex(10)
+Gui.frmShaker.txtContactStreet.ControlGroup(10)
+Gui.frmShaker.txtContactCity.Create(TextBox,"",True,150,20,0,6,364,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContactCity.MaxLength(30)
+Gui.frmShaker.txtContactCity.TabStop(True)
+Gui.frmShaker.txtContactCity.TabIndex(11)
+Gui.frmShaker.txtContactCity.ControlGroup(10)
+Gui.frmShaker.txtContactZipCode.Create(TextBox,"",True,100,20,0,282,364,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContactZipCode.MaxLength(5)
+Gui.frmShaker.txtContactZipCode.TabStop(True)
+Gui.frmShaker.txtContactZipCode.TabIndex(13)
+Gui.frmShaker.txtContactZipCode.ControlGroup(10)
+Gui.frmShaker.txtContactPhone.Create(TextBox,"",True,100,20,0,6,407,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContactPhone.MaxLength(10)
+Gui.frmShaker.txtContactPhone.TabStop(True)
+Gui.frmShaker.txtContactPhone.TabIndex(14)
+Gui.frmShaker.txtContactPhone.ControlGroup(10)
+Gui.frmShaker.chkAirCab.Create(CheckBox)
+Gui.frmShaker.chkAirCab.Enabled(True)
+Gui.frmShaker.chkAirCab.Visible(True)
+Gui.frmShaker.chkAirCab.Zorder(0)
+Gui.frmShaker.chkAirCab.Size(110,20)
+Gui.frmShaker.chkAirCab.Position(5000,278)
+Gui.frmShaker.chkAirCab.Caption("Air Cab")
+Gui.frmShaker.chkAirCab.FontName("Tahoma")
+Gui.frmShaker.chkAirCab.FontSize(8.25)
+Gui.frmShaker.chkAirCab.TabStop(True)
+Gui.frmShaker.chkAirCab.TabIndex(28)
+Gui.frmShaker.chkAirCab.ControlGroup(10)
+Gui.frmShaker.chkRotarySweeps.Create(CheckBox)
+Gui.frmShaker.chkRotarySweeps.Enabled(True)
+Gui.frmShaker.chkRotarySweeps.Visible(True)
+Gui.frmShaker.chkRotarySweeps.Zorder(0)
+Gui.frmShaker.chkRotarySweeps.Size(110,20)
+Gui.frmShaker.chkRotarySweeps.Position(5000,278)
+Gui.frmShaker.chkRotarySweeps.Caption("Rotary Sweeps")
+Gui.frmShaker.chkRotarySweeps.FontName("Tahoma")
+Gui.frmShaker.chkRotarySweeps.FontSize(8.25)
+Gui.frmShaker.chkRotarySweeps.TabStop(True)
+Gui.frmShaker.chkRotarySweeps.TabIndex(29)
+Gui.frmShaker.chkRotarySweeps.ControlGroup(10)
+Gui.frmShaker.chkHydraulicUpdates.Create(CheckBox)
+Gui.frmShaker.chkHydraulicUpdates.Enabled(True)
+Gui.frmShaker.chkHydraulicUpdates.Visible(True)
+Gui.frmShaker.chkHydraulicUpdates.Zorder(0)
+Gui.frmShaker.chkHydraulicUpdates.Size(110,20)
+Gui.frmShaker.chkHydraulicUpdates.Position(5000,278)
+Gui.frmShaker.chkHydraulicUpdates.Caption("Hydraulic Updates")
+Gui.frmShaker.chkHydraulicUpdates.FontName("Tahoma")
+Gui.frmShaker.chkHydraulicUpdates.FontSize(8.25)
+Gui.frmShaker.chkHydraulicUpdates.TabStop(True)
+Gui.frmShaker.chkHydraulicUpdates.TabIndex(31)
+Gui.frmShaker.chkHydraulicUpdates.ControlGroup(10)
+Gui.frmShaker.txtGrower.Create(TextBox,"",True,240,20,0,142,63,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtGrower.MaxLength(30)
+Gui.frmShaker.txtGrower.TabStop(True)
+Gui.frmShaker.txtGrower.TabIndex(2)
+Gui.frmShaker.txtGrower.ControlGroup(10)
+Gui.frmShaker.txtGrower.DefaultValue("")
+Gui.frmShaker.txtContractNumber.Create(TextBox,"",True,100,20,0,428,63,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtContractNumber.MaxLength(6)
+Gui.frmShaker.txtContractNumber.NumericOnly(2)
+Gui.frmShaker.txtContractNumber.TabStop(True)
+Gui.frmShaker.txtContractNumber.TabIndex(15)
+Gui.frmShaker.txtContractNumber.ControlGroup(10)
+Gui.frmShaker.txtTaxCode.Create(TextBox,"",True,100,20,0,545,63,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtTaxCode.NumericOnly(2)
+Gui.frmShaker.txtTaxCode.MaxLength(4)
+Gui.frmShaker.txtTaxCode.TabStop(True)
+Gui.frmShaker.txtTaxCode.TabIndex(16)
+Gui.frmShaker.txtTaxCode.ControlGroup(10)
+Gui.frmShaker.txtNutType.Create(TextBox,"",True,100,20,0,428,236,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtNutType.MaxLength(30)
+Gui.frmShaker.txtNutType.TabStop(True)
+Gui.frmShaker.txtNutType.TabIndex(27)
+Gui.frmShaker.txtNutType.ControlGroup(10)
+Gui.frmShaker.txtMachineType.Create(TextBox,"",True,100,20,0,428,106,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtMachineType.MaxLength(30)
+Gui.frmShaker.txtMachineType.TabStop(True)
+Gui.frmShaker.txtMachineType.TabIndex(18)
+Gui.frmShaker.txtMachineType.ControlGroup(10)
+Gui.frmShaker.dtpServiced.Create(DatePicker)
+Gui.frmShaker.dtpServiced.Enabled(True)
+Gui.frmShaker.dtpServiced.Visible(True)
+Gui.frmShaker.dtpServiced.Zorder(0)
+Gui.frmShaker.dtpServiced.Size(100,20)
+Gui.frmShaker.dtpServiced.Position(663,149)
+Gui.frmShaker.dtpServiced.CheckBox(False)
+Gui.frmShaker.dtpServiced.FontName("Tahoma")
+Gui.frmShaker.dtpServiced.FontSize(8.25)
+Gui.frmShaker.dtpServiced.TabStop(True)
+Gui.frmShaker.dtpServiced.TabIndex(23)
+Gui.frmShaker.dtpServiced.ControlGroup(10)
+Gui.frmShaker.txtBrand.Create(TextBox,"",True,100,20,0,663,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtBrand.MaxLength(30)
+Gui.frmShaker.txtBrand.TabStop(True)
+Gui.frmShaker.txtBrand.TabIndex(26)
+Gui.frmShaker.txtBrand.ControlGroup(10)
+Gui.frmShaker.txtServiceType.Create(TextBox,"",True,100,20,0,5000,106,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtServiceType.MaxLength(30)
+Gui.frmShaker.txtServiceType.TabStop(True)
+Gui.frmShaker.txtServiceType.TabIndex(20)
+Gui.frmShaker.txtServiceType.ControlGroup(10)
+Gui.frmShaker.txtEngineType.Create(TextBox,"",True,100,20,0,545,106,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtEngineType.MaxLength(30)
+Gui.frmShaker.txtEngineType.TabStop(True)
+Gui.frmShaker.txtEngineType.TabIndex(19)
+Gui.frmShaker.txtEngineType.ControlGroup(10)
+Gui.frmShaker.txtMachineNumber.Create(TextBox,"",True,100,20,0,428,149,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtMachineNumber.MaxLength(30)
+Gui.frmShaker.txtMachineNumber.TabStop(True)
+Gui.frmShaker.txtMachineNumber.TabIndex(21)
+Gui.frmShaker.txtMachineNumber.ControlGroup(10)
+Gui.frmShaker.txtMachineUse.Create(TextBox,"",True,100,20,0,5000,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtMachineUse.MaxLength(30)
+Gui.frmShaker.txtMachineUse.TabStop(True)
+Gui.frmShaker.txtMachineUse.TabIndex(24)
+Gui.frmShaker.txtMachineUse.ControlGroup(10)
+Gui.frmShaker.txtTachHours.Create(TextBox,"",True,100,20,0,545,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtTachHours.MaxLength(8)
+Gui.frmShaker.txtTachHours.NumericOnly(2)
+Gui.frmShaker.txtTachHours.TabStop(True)
+Gui.frmShaker.txtTachHours.TabIndex(25)
+Gui.frmShaker.txtTachHours.ControlGroup(10)
+Gui.frmShaker.txtEngineNumber.Create(TextBox,"",True,100,20,0,545,149,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtEngineNumber.MaxLength(30)
+Gui.frmShaker.txtEngineNumber.TabStop(True)
+Gui.frmShaker.txtEngineNumber.TabIndex(22)
+Gui.frmShaker.txtEngineNumber.ControlGroup(10)
+Gui.frmShaker.cmdCustomerLookup.Create(Button)
+Gui.frmShaker.cmdCustomerLookup.Enabled(True)
+Gui.frmShaker.cmdCustomerLookup.Visible(True)
+Gui.frmShaker.cmdCustomerLookup.Zorder(0)
+Gui.frmShaker.cmdCustomerLookup.Size(23,23)
+Gui.frmShaker.cmdCustomerLookup.Position(109,62)
+Gui.frmShaker.cmdCustomerLookup.Caption("")
+Gui.frmShaker.cmdCustomerLookup.FontName("Tahoma")
+Gui.frmShaker.cmdCustomerLookup.FontSize(8.25)
+Gui.frmShaker.cmdCustomerLookup.SvgPicture("icon_browser_color")
+Gui.frmShaker.cmdCustomerLookup.Event(Click,cmdCustomerLookup_Click)
+Gui.frmShaker.cmdCustomerLookup.TabStop(True)
+Gui.frmShaker.cmdCustomerLookup.TabIndex(1)
+Gui.frmShaker.cmdCustomerLookup.ControlGroup(10)
+Gui.frmShaker.ddlState.Create(DropDownList)
+Gui.frmShaker.ddlState.Enabled(True)
+Gui.frmShaker.ddlState.Visible(True)
+Gui.frmShaker.ddlState.Zorder(0)
+Gui.frmShaker.ddlState.Size(50,20)
+Gui.frmShaker.ddlState.Position(171,192)
+Gui.frmShaker.ddlState.FontName("Tahoma")
+Gui.frmShaker.ddlState.FontSize(8.25)
+Gui.frmShaker.ddlState.TabStop(True)
+Gui.frmShaker.ddlState.TabIndex(6)
+Gui.frmShaker.ddlState.ControlGroup(10)
+Gui.frmShaker.ddlContactState.Create(DropDownList)
+Gui.frmShaker.ddlContactState.Enabled(True)
+Gui.frmShaker.ddlContactState.Visible(True)
+Gui.frmShaker.ddlContactState.Zorder(0)
+Gui.frmShaker.ddlContactState.Size(50,20)
+Gui.frmShaker.ddlContactState.Position(172,364)
+Gui.frmShaker.ddlContactState.FontName("Tahoma")
+Gui.frmShaker.ddlContactState.FontSize(8.25)
+Gui.frmShaker.ddlContactState.TabStop(True)
+Gui.frmShaker.ddlContactState.TabIndex(12)
+Gui.frmShaker.ddlContactState.ControlGroup(10)
+Gui.frmShaker.ddlFWOFormat.Create(DropDownList)
+Gui.frmShaker.ddlFWOFormat.Enabled(True)
+Gui.frmShaker.ddlFWOFormat.Visible(True)
+Gui.frmShaker.ddlFWOFormat.Zorder(0)
+Gui.frmShaker.ddlFWOFormat.Size(40,20)
+Gui.frmShaker.ddlFWOFormat.Position(663,63)
+Gui.frmShaker.ddlFWOFormat.FontName("Tahoma")
+Gui.frmShaker.ddlFWOFormat.FontSize(8.25)
+Gui.frmShaker.ddlFWOFormat.TabStop(True)
+Gui.frmShaker.ddlFWOFormat.TabIndex(17)
+Gui.frmShaker.ddlFWOFormat.ControlGroup(10)
+Gui.frmShaker.txtComments.Create(TextboxM)
+Gui.frmShaker.txtComments.Enabled(True)
+Gui.frmShaker.txtComments.Visible(True)
+Gui.frmShaker.txtComments.Zorder(0)
+Gui.frmShaker.txtComments.Size(465,106)
+Gui.frmShaker.txtComments.Position(428,321)
+Gui.frmShaker.txtComments.FontName("Tahoma")
+Gui.frmShaker.txtComments.FontSize(8.25)
+Gui.frmShaker.lbl28.Create(Label,"Comments",True,50,13,0,428,308,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl28.BorderStyle(0)
+Gui.frmShaker.chkHydrashake.Create(CheckBox)
+Gui.frmShaker.chkHydrashake.Enabled(True)
+Gui.frmShaker.chkHydrashake.Visible(True)
+Gui.frmShaker.chkHydrashake.Zorder(0)
+Gui.frmShaker.chkHydrashake.Size(97,20)
+Gui.frmShaker.chkHydrashake.Position(545,236)
+Gui.frmShaker.chkHydrashake.Caption("Hydrashake")
+Gui.frmShaker.chkHydrashake.FontName("Tahoma")
+Gui.frmShaker.chkHydrashake.FontSize(8.25)
+Gui.frmShaker.lbl29.Create(Label,"Head Style",True,52,13,0,428,179,True,0,"Tahoma",8.25,,0,0)
+Gui.frmShaker.lbl29.BorderStyle(0)
+Gui.frmShaker.txtHeadStyle.Create(TextBox,"",True,100,20,0,428,192,True,0,"Tahoma",8.25,,1)
+Gui.frmShaker.txtHeadStyle.MaxLength(30)
+Gui.frmWindMachine..Create(DashForm)
+Gui.frmWindMachine..Caption("Wind Machine Maintenance")
+Gui.frmWindMachine..Size(915,503)
+Gui.frmWindMachine..MinX(0)
+Gui.frmWindMachine..MinY(0)
+Gui.frmWindMachine..Position(0,0)
+Gui.frmWindMachine..AlwaysOnTop(False)
+Gui.frmWindMachine..FontName("Tahoma")
+Gui.frmWindMachine..FontSize(8.25)
+Gui.frmWindMachine..ControlBox(True)
+Gui.frmWindMachine..MaxButton(True)
+Gui.frmWindMachine..MinButton(True)
+Gui.frmWindMachine..MousePointer(0)
+Gui.frmWindMachine..Moveable(True)
+Gui.frmWindMachine..Sizeable(True)
+Gui.frmWindMachine..ShowInTaskBar(True)
+Gui.frmWindMachine..TitleBar(True)
+Gui.frmWindMachine..Event(UnLoad,frmWindMachine_UnLoad)
+Gui.frmWindMachine..BarSaveButton(True,False)
+Gui.frmWindMachine..BarAddButton("WindMachineExtra","Extra Fields")
+Gui.frmWindMachine..Event(SaveButtonClick,frmWindMachine_SaveAllButtonClick)
+Gui.frmWindMachine..Event(UserButtonClicked,frmWindMachine_UserButtonClicked)
+Gui.frmWindMachine.lbl1.Create(Label,"Machine ID",True,53,13,0,6,8,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl1.BorderStyle(0)
+Gui.frmWindMachine.lbl1.ControlGroup(20)
+Gui.frmWindMachine.txtMachineID.Create(TextBox,"",True,100,20,0,6,21,False,1,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtMachineID.Locked(True)
+Gui.frmWindMachine.txtMachineID.NumericOnly(2)
+Gui.frmWindMachine.txtMachineID.MaxLength(6)
+Gui.frmWindMachine.txtMachineID.ControlGroup(20)
+Gui.frmWindMachine.lbl2.Create(Label,"Customer",True,46,13,0,6,92,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl2.BorderStyle(0)
+Gui.frmWindMachine.lbl2.ControlGroup(20)
+Gui.frmWindMachine.txtCustomer.Create(TextBox,"",True,100,20,0,6,105,False,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtCustomer.MaxLength(6)
+Gui.frmWindMachine.txtCustomer.ControlGroup(20)
+Gui.frmWindMachine.lbl3.Create(Label,"Customer Name",True,76,13,0,6,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl3.BorderStyle(0)
+Gui.frmWindMachine.lbl3.ControlGroup(20)
+Gui.frmWindMachine.lbl4.Create(Label,"Grower",True,35,13,0,143,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl4.BorderStyle(0)
+Gui.frmWindMachine.lbl4.ControlGroup(20)
+Gui.frmWindMachine.lbl5.Create(Label,"Street",True,30,13,0,6,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl5.BorderStyle(0)
+Gui.frmWindMachine.lbl5.ControlGroup(20)
+Gui.frmWindMachine.lbl6.Create(Label,"City",True,19,13,0,6,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl6.BorderStyle(0)
+Gui.frmWindMachine.lbl6.ControlGroup(20)
+Gui.frmWindMachine.lbl7.Create(Label,"State",True,26,13,0,172,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl7.BorderStyle(0)
+Gui.frmWindMachine.lbl7.ControlGroup(20)
+Gui.frmWindMachine.lbl8.Create(Label,"Zip Code",True,42,13,0,282,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl8.BorderStyle(0)
+Gui.frmWindMachine.lbl8.ControlGroup(20)
+Gui.frmWindMachine.lbl9.Create(Label,"Phone Number",True,70,13,0,6,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl9.BorderStyle(0)
+Gui.frmWindMachine.lbl9.ControlGroup(20)
+Gui.frmWindMachine.lbl10.Create(Label,"Contract Number",True,82,13,0,428,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl10.BorderStyle(0)
+Gui.frmWindMachine.lbl10.ControlGroup(20)
+Gui.frmWindMachine.lbl11.Create(Label,"Tax Code",True,46,13,0,545,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl11.BorderStyle(0)
+Gui.frmWindMachine.lbl11.ControlGroup(20)
+Gui.frmWindMachine.lbl13.Create(Label,"Machine Type",True,66,13,0,428,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl13.BorderStyle(0)
+Gui.frmWindMachine.lbl13.ControlGroup(20)
+Gui.frmWindMachine.lbl14.Create(Label,"Serviced",True,41,13,0,664,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl14.BorderStyle(0)
+Gui.frmWindMachine.lbl14.ControlGroup(20)
+Gui.frmWindMachine.lbl15.Create(Label,"Brand",True,28,13,0,664,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl15.BorderStyle(0)
+Gui.frmWindMachine.lbl15.ControlGroup(20)
+Gui.frmWindMachine.lbl17.Create(Label,"Machine Number",True,79,13,0,428,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl17.BorderStyle(0)
+Gui.frmWindMachine.lbl17.ControlGroup(20)
+Gui.frmWindMachine.lbl18.Create(Label,"Service Type",True,62,13,0,664,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl18.BorderStyle(0)
+Gui.frmWindMachine.lbl18.ControlGroup(20)
+Gui.frmWindMachine.lbl19.Create(Label,"Engine Type",True,59,13,0,545,93,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl19.BorderStyle(0)
+Gui.frmWindMachine.lbl19.ControlGroup(20)
+Gui.frmWindMachine.lbl32.Create(Label,"FWO Format",True,61,13,0,664,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl32.BorderStyle(0)
+Gui.frmWindMachine.lbl32.ControlGroup(20)
+Gui.frmWindMachine.txtCustomerName.Create(TextBox,"",True,300,20,0,6,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtCustomerName.MaxLength(30)
+Gui.frmWindMachine.txtCustomerName.TabStop(True)
+Gui.frmWindMachine.txtCustomerName.TabIndex(4)
+Gui.frmWindMachine.txtCustomerName.ControlGroup(20)
+Gui.frmWindMachine.txtStreetAddress.Create(TextBox,"",True,300,20,0,6,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtStreetAddress.MaxLength(30)
+Gui.frmWindMachine.txtStreetAddress.TabStop(True)
+Gui.frmWindMachine.txtStreetAddress.TabIndex(6)
+Gui.frmWindMachine.txtStreetAddress.ControlGroup(20)
+Gui.frmWindMachine.txtCity.Create(TextBox,"",True,150,20,0,6,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtCity.MaxLength(30)
+Gui.frmWindMachine.txtCity.TabStop(True)
+Gui.frmWindMachine.txtCity.TabIndex(7)
+Gui.frmWindMachine.txtCity.ControlGroup(20)
+Gui.frmWindMachine.txtZipCode.Create(TextBox,"",True,100,20,0,282,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtZipCode.MaxLength(5)
+Gui.frmWindMachine.txtZipCode.TabStop(True)
+Gui.frmWindMachine.txtZipCode.TabIndex(9)
+Gui.frmWindMachine.txtZipCode.ControlGroup(20)
+Gui.frmWindMachine.txtPhone.Create(TextBox,"",True,100,20,0,6,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtPhone.MaxLength(10)
+Gui.frmWindMachine.txtPhone.TabStop(True)
+Gui.frmWindMachine.txtPhone.TabIndex(10)
+Gui.frmWindMachine.txtPhone.ControlGroup(20)
+Gui.frmWindMachine.txtGrower.Create(TextBox,"",True,240,20,0,142,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtGrower.MaxLength(30)
+Gui.frmWindMachine.txtGrower.TabStop(True)
+Gui.frmWindMachine.txtGrower.TabIndex(3)
+Gui.frmWindMachine.txtGrower.ControlGroup(20)
+Gui.frmWindMachine.txtContractNumber.Create(TextBox,"",True,100,20,0,428,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtContractNumber.MaxLength(6)
+Gui.frmWindMachine.txtContractNumber.NumericOnly(2)
+Gui.frmWindMachine.txtContractNumber.TabStop(True)
+Gui.frmWindMachine.txtContractNumber.TabIndex(11)
+Gui.frmWindMachine.txtContractNumber.ControlGroup(20)
+Gui.frmWindMachine.txtTaxCode.Create(TextBox,"",True,100,20,0,545,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtTaxCode.NumericOnly(2)
+Gui.frmWindMachine.txtTaxCode.MaxLength(4)
+Gui.frmWindMachine.txtTaxCode.TabStop(True)
+Gui.frmWindMachine.txtTaxCode.TabIndex(12)
+Gui.frmWindMachine.txtTaxCode.ControlGroup(20)
+Gui.frmWindMachine.txtMachineType.Create(TextBox,"",True,100,20,0,428,106,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtMachineType.MaxLength(30)
+Gui.frmWindMachine.txtMachineType.TabStop(True)
+Gui.frmWindMachine.txtMachineType.TabIndex(14)
+Gui.frmWindMachine.txtMachineType.ControlGroup(20)
+Gui.frmWindMachine.dtpServiced.Create(DatePicker)
+Gui.frmWindMachine.dtpServiced.Enabled(True)
+Gui.frmWindMachine.dtpServiced.Visible(True)
+Gui.frmWindMachine.dtpServiced.Zorder(0)
+Gui.frmWindMachine.dtpServiced.Size(100,20)
+Gui.frmWindMachine.dtpServiced.Position(664,149)
+Gui.frmWindMachine.dtpServiced.CheckBox(False)
+Gui.frmWindMachine.dtpServiced.FontName("Tahoma")
+Gui.frmWindMachine.dtpServiced.FontSize(8.25)
+Gui.frmWindMachine.dtpServiced.TabStop(True)
+Gui.frmWindMachine.dtpServiced.TabIndex(19)
+Gui.frmWindMachine.dtpServiced.ControlGroup(20)
+Gui.frmWindMachine.txtBrand.Create(TextBox,"",True,100,20,0,664,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtBrand.MaxLength(30)
+Gui.frmWindMachine.txtBrand.TabStop(True)
+Gui.frmWindMachine.txtBrand.TabIndex(22)
+Gui.frmWindMachine.txtBrand.ControlGroup(20)
+Gui.frmWindMachine.txtServiceType.Create(TextBox,"",True,100,20,0,664,106,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtServiceType.MaxLength(30)
+Gui.frmWindMachine.txtServiceType.TabStop(True)
+Gui.frmWindMachine.txtServiceType.TabIndex(16)
+Gui.frmWindMachine.txtServiceType.ControlGroup(20)
+Gui.frmWindMachine.txtEngineType.Create(TextBox,"",True,100,20,0,545,106,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtEngineType.MaxLength(30)
+Gui.frmWindMachine.txtEngineType.TabStop(True)
+Gui.frmWindMachine.txtEngineType.TabIndex(15)
+Gui.frmWindMachine.txtEngineType.ControlGroup(20)
+Gui.frmWindMachine.txtMachineNumber.Create(TextBox,"",True,100,20,0,428,149,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtMachineNumber.MaxLength(30)
+Gui.frmWindMachine.txtMachineNumber.TabStop(True)
+Gui.frmWindMachine.txtMachineNumber.TabIndex(17)
+Gui.frmWindMachine.txtMachineNumber.ControlGroup(20)
+Gui.frmWindMachine.cmdCustomerLookup.Create(Button)
+Gui.frmWindMachine.cmdCustomerLookup.Enabled(True)
+Gui.frmWindMachine.cmdCustomerLookup.Visible(True)
+Gui.frmWindMachine.cmdCustomerLookup.Zorder(0)
+Gui.frmWindMachine.cmdCustomerLookup.Size(23,23)
+Gui.frmWindMachine.cmdCustomerLookup.Position(109,104)
+Gui.frmWindMachine.cmdCustomerLookup.Caption("")
+Gui.frmWindMachine.cmdCustomerLookup.FontName("Tahoma")
+Gui.frmWindMachine.cmdCustomerLookup.FontSize(8.25)
+Gui.frmWindMachine.cmdCustomerLookup.SvgPicture("icon_browser_color")
+Gui.frmWindMachine.cmdCustomerLookup.Event(Click,cmdCustomerLookup_Click)
+Gui.frmWindMachine.cmdCustomerLookup.TabStop(True)
+Gui.frmWindMachine.cmdCustomerLookup.TabIndex(1)
+Gui.frmWindMachine.cmdCustomerLookup.ControlGroup(20)
+Gui.frmWindMachine.lbl12.Create(Label,"Orchard",True,39,13,0,142,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl12.BorderStyle(0)
+Gui.frmWindMachine.lbl12.ControlGroup(20)
+Gui.frmWindMachine.txtOrchard.Create(TextBox,"",True,240,20,0,142,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtOrchard.MaxLength(30)
+Gui.frmWindMachine.txtOrchard.TabStop(True)
+Gui.frmWindMachine.txtOrchard.TabIndex(2)
+Gui.frmWindMachine.txtOrchard.ControlGroup(20)
+Gui.frmWindMachine.lbl16.Create(Label,"Engine Number",True,72,13,0,545,136,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl16.BorderStyle(0)
+Gui.frmWindMachine.lbl16.ControlGroup(20)
+Gui.frmWindMachine.txtEngineNumber.Create(TextBox,"",True,100,20,0,545,149,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtEngineNumber.TabStop(True)
+Gui.frmWindMachine.txtEngineNumber.TabIndex(18)
+Gui.frmWindMachine.txtEngineNumber.ControlGroup(20)
+Gui.frmWindMachine.ddlState.Create(DropDownList)
+Gui.frmWindMachine.ddlState.Enabled(True)
+Gui.frmWindMachine.ddlState.Visible(True)
+Gui.frmWindMachine.ddlState.Zorder(0)
+Gui.frmWindMachine.ddlState.Size(50,20)
+Gui.frmWindMachine.ddlState.Position(171,234)
+Gui.frmWindMachine.ddlState.FontName("Tahoma")
+Gui.frmWindMachine.ddlState.FontSize(8.25)
+Gui.frmWindMachine.ddlState.TabStop(True)
+Gui.frmWindMachine.ddlState.TabIndex(8)
+Gui.frmWindMachine.ddlState.ControlGroup(20)
+Gui.frmWindMachine.ddlFWOFormat.Create(DropDownList)
+Gui.frmWindMachine.ddlFWOFormat.Enabled(True)
+Gui.frmWindMachine.ddlFWOFormat.Visible(True)
+Gui.frmWindMachine.ddlFWOFormat.Zorder(0)
+Gui.frmWindMachine.ddlFWOFormat.Size(40,20)
+Gui.frmWindMachine.ddlFWOFormat.Position(664,63)
+Gui.frmWindMachine.ddlFWOFormat.FontName("Tahoma")
+Gui.frmWindMachine.ddlFWOFormat.FontSize(8.25)
+Gui.frmWindMachine.ddlFWOFormat.TabStop(True)
+Gui.frmWindMachine.ddlFWOFormat.TabIndex(13)
+Gui.frmWindMachine.ddlFWOFormat.ControlGroup(20)
+Gui.frmWindMachine.lbl20.Create(Label,"Area",True,23,13,0,332,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl20.BorderStyle(0)
+Gui.frmWindMachine.lbl20.ControlGroup(20)
+Gui.frmWindMachine.txtArea.Create(TextBox,"",True,50,20,0,332,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtArea.MaxLength(2)
+Gui.frmWindMachine.txtArea.TabStop(True)
+Gui.frmWindMachine.txtArea.TabIndex(5)
+Gui.frmWindMachine.txtArea.ControlGroup(20)
+Gui.frmWindMachine.lbl21.Create(Label,"Blade Number",True,66,13,0,428,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl21.BorderStyle(0)
+Gui.frmWindMachine.lbl21.ControlGroup(20)
+Gui.frmWindMachine.txtBladeNumber.Create(TextBox,"",True,100,20,0,428,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtBladeNumber.MaxLength(30)
+Gui.frmWindMachine.txtBladeNumber.TabStop(True)
+Gui.frmWindMachine.txtBladeNumber.TabIndex(20)
+Gui.frmWindMachine.txtBladeNumber.ControlGroup(20)
+Gui.frmWindMachine.lbl22.Create(Label,"Top Box Number",True,79,13,0,428,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl22.BorderStyle(0)
+Gui.frmWindMachine.lbl22.ControlGroup(20)
+Gui.frmWindMachine.txtTopBoxNumber.Create(TextBox,"",True,100,20,0,428,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtTopBoxNumber.MaxLength(30)
+Gui.frmWindMachine.txtTopBoxNumber.TabStop(True)
+Gui.frmWindMachine.txtTopBoxNumber.TabIndex(23)
+Gui.frmWindMachine.txtTopBoxNumber.ControlGroup(20)
+Gui.frmWindMachine.lbl23.Create(Label,"Bottom Number",True,74,13,0,545,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl23.BorderStyle(0)
+Gui.frmWindMachine.lbl23.ControlGroup(20)
+Gui.frmWindMachine.txtBottomNumber.Create(TextBox,"",True,100,20,0,545,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtBottomNumber.MaxLength(30)
+Gui.frmWindMachine.txtBottomNumber.TabStop(True)
+Gui.frmWindMachine.txtBottomNumber.TabIndex(24)
+Gui.frmWindMachine.txtBottomNumber.ControlGroup(20)
+Gui.frmWindMachine.lbl24.Create(Label,"Tower Number",True,70,13,0,664,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl24.BorderStyle(0)
+Gui.frmWindMachine.lbl24.ControlGroup(20)
+Gui.frmWindMachine.txtTowerNumber.Create(TextBox,"",True,100,20,0,664,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtTowerNumber.MaxLength(30)
+Gui.frmWindMachine.txtTowerNumber.TabStop(True)
+Gui.frmWindMachine.txtTowerNumber.TabIndex(25)
+Gui.frmWindMachine.txtTowerNumber.ControlGroup(20)
+Gui.frmWindMachine.lbl25.Create(Label,"Fruit Type",True,49,13,0,428,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl25.BorderStyle(0)
+Gui.frmWindMachine.lbl25.ControlGroup(20)
+Gui.frmWindMachine.txtFruitType.Create(TextBox,"",True,100,20,0,428,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtFruitType.MaxLength(30)
+Gui.frmWindMachine.txtFruitType.TabStop(True)
+Gui.frmWindMachine.txtFruitType.TabIndex(26)
+Gui.frmWindMachine.txtFruitType.ControlGroup(20)
+Gui.frmWindMachine.lbl26.Create(Label,"Installed",True,41,13,0,545,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl26.BorderStyle(0)
+Gui.frmWindMachine.lbl26.ControlGroup(20)
+Gui.frmWindMachine.dtpInstalled.Create(DatePicker)
+Gui.frmWindMachine.dtpInstalled.Enabled(True)
+Gui.frmWindMachine.dtpInstalled.Visible(True)
+Gui.frmWindMachine.dtpInstalled.Zorder(0)
+Gui.frmWindMachine.dtpInstalled.Size(100,20)
+Gui.frmWindMachine.dtpInstalled.Position(545,278)
+Gui.frmWindMachine.dtpInstalled.CheckBox(False)
+Gui.frmWindMachine.dtpInstalled.FontName("Tahoma")
+Gui.frmWindMachine.dtpInstalled.FontSize(8.25)
+Gui.frmWindMachine.dtpInstalled.TabStop(True)
+Gui.frmWindMachine.dtpInstalled.TabIndex(27)
+Gui.frmWindMachine.dtpInstalled.ControlGroup(20)
+Gui.frmWindMachine.lbl27.Create(Label,"Fuel Type",True,47,13,0,545,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl27.BorderStyle(0)
+Gui.frmWindMachine.lbl27.ControlGroup(20)
+Gui.frmWindMachine.txtFuelType.Create(TextBox,"",True,100,20,0,545,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtFuelType.MaxLength(30)
+Gui.frmWindMachine.txtFuelType.TabStop(True)
+Gui.frmWindMachine.txtFuelType.TabIndex(21)
+Gui.frmWindMachine.txtFuelType.ControlGroup(20)
+Gui.frmWindMachine.lbl28.Create(Label,"Tilt (Y/N)",True,42,13,0,664,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl28.BorderStyle(0)
+Gui.frmWindMachine.lbl28.ControlGroup(20)
+Gui.frmWindMachine.txtTilt.Create(TextBox,"",True,40,20,0,664,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtTilt.TabStop(True)
+Gui.frmWindMachine.txtTilt.TabIndex(28)
+Gui.frmWindMachine.txtTilt.ControlGroup(20)
+Gui.frmWindMachine.txtTilt.MaxLength(1)
+Gui.frmWindMachine.lbl29.Create(Label,"Contour Cut (Y/N)",True,87,13,0,428,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl29.BorderStyle(0)
+Gui.frmWindMachine.lbl29.ControlGroup(20)
+Gui.frmWindMachine.txtContourCut.Create(TextBox,"",True,40,20,0,428,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtContourCut.MaxLength(1)
+Gui.frmWindMachine.txtContourCut.TabStop(True)
+Gui.frmWindMachine.txtContourCut.TabIndex(29)
+Gui.frmWindMachine.txtContourCut.ControlGroup(20)
+Gui.frmWindMachine.lbl30.Create(Label,"Rotation",True,41,13,0,545,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl30.BorderStyle(0)
+Gui.frmWindMachine.lbl30.ControlGroup(20)
+Gui.frmWindMachine.ddlRotation.Create(DropDownList)
+Gui.frmWindMachine.ddlRotation.Enabled(True)
+Gui.frmWindMachine.ddlRotation.Visible(True)
+Gui.frmWindMachine.ddlRotation.Zorder(0)
+Gui.frmWindMachine.ddlRotation.Size(50,20)
+Gui.frmWindMachine.ddlRotation.Position(545,322)
+Gui.frmWindMachine.ddlRotation.FontName("Tahoma")
+Gui.frmWindMachine.ddlRotation.FontSize(8.25)
+Gui.frmWindMachine.ddlRotation.TabStop(True)
+Gui.frmWindMachine.ddlRotation.TabIndex(30)
+Gui.frmWindMachine.ddlRotation.ControlGroup(20)
+Gui.frmWindMachine.chkExtendedWarranty.Create(CheckBox)
+Gui.frmWindMachine.chkExtendedWarranty.Enabled(True)
+Gui.frmWindMachine.chkExtendedWarranty.Visible(True)
+Gui.frmWindMachine.chkExtendedWarranty.Zorder(0)
+Gui.frmWindMachine.chkExtendedWarranty.Size(122,20)
+Gui.frmWindMachine.chkExtendedWarranty.Position(664,322)
+Gui.frmWindMachine.chkExtendedWarranty.Caption("Extended Warranty")
+Gui.frmWindMachine.chkExtendedWarranty.FontName("Tahoma")
+Gui.frmWindMachine.chkExtendedWarranty.FontSize(8.25)
+Gui.frmWindMachine.chkExtendedWarranty.TabStop(True)
+Gui.frmWindMachine.chkExtendedWarranty.TabIndex(31)
+Gui.frmWindMachine.chkExtendedWarranty.ControlGroup(20)
+Gui.frmWindMachine.lbl31.Create(Label,"Clutch",True,30,13,0,545,353,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl31.BorderStyle(0)
+Gui.frmWindMachine.lbl31.ControlGroup(20)
+Gui.frmWindMachine.ddlClutch.Create(DropDownList)
+Gui.frmWindMachine.ddlClutch.Enabled(True)
+Gui.frmWindMachine.ddlClutch.Visible(True)
+Gui.frmWindMachine.ddlClutch.Zorder(0)
+Gui.frmWindMachine.ddlClutch.Size(40,20)
+Gui.frmWindMachine.ddlClutch.Position(545,366)
+Gui.frmWindMachine.ddlClutch.FontName("Tahoma")
+Gui.frmWindMachine.ddlClutch.FontSize(8.25)
+Gui.frmWindMachine.ddlClutch.TabStop(True)
+Gui.frmWindMachine.ddlClutch.TabIndex(32)
+Gui.frmWindMachine.ddlClutch.ControlGroup(20)
+Gui.frmWindMachine.lbl33.Create(Label,"Latitude",True,39,13,0,428,397,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl33.BorderStyle(0)
+Gui.frmWindMachine.lbl33.ControlGroup(20)
+Gui.frmWindMachine.lbl34.Create(Label,"Longitude",True,47,13,0,545,397,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl34.BorderStyle(0)
+Gui.frmWindMachine.lbl34.ControlGroup(20)
+Gui.frmWindMachine.chkDogLeg.Create(CheckBox)
+Gui.frmWindMachine.chkDogLeg.Enabled(True)
+Gui.frmWindMachine.chkDogLeg.Visible(True)
+Gui.frmWindMachine.chkDogLeg.Zorder(0)
+Gui.frmWindMachine.chkDogLeg.Size(75,20)
+Gui.frmWindMachine.chkDogLeg.Position(664,366)
+Gui.frmWindMachine.chkDogLeg.Caption("Dog Leg")
+Gui.frmWindMachine.chkDogLeg.FontName("Tahoma")
+Gui.frmWindMachine.chkDogLeg.FontSize(8.25)
+Gui.frmWindMachine.chkDogLeg.TabStop(True)
+Gui.frmWindMachine.chkDogLeg.TabIndex(33)
+Gui.frmWindMachine.chkDogLeg.ControlGroup(20)
+Gui.frmWindMachine.txtLatitude.Create(TextBox,"",True,100,20,0,428,412,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtLatitude.MaxLength(30)
+Gui.frmWindMachine.txtLatitude.TabStop(True)
+Gui.frmWindMachine.txtLatitude.TabIndex(35)
+Gui.frmWindMachine.txtLatitude.ControlGroup(20)
+Gui.frmWindMachine.txtLongitude.Create(TextBox,"",True,100,20,0,545,412,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtLongitude.MaxLength(30)
+Gui.frmWindMachine.txtLongitude.TabStop(True)
+Gui.frmWindMachine.txtLongitude.TabIndex(36)
+Gui.frmWindMachine.txtLongitude.ControlGroup(20)
+Gui.frmWindMachine.lbl35.Create(Label,"Model",True,28,13,0,783,353,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl35.BorderStyle(0)
+Gui.frmWindMachine.lbl35.ControlGroup(20)
+Gui.frmWindMachine.txtModel.Create(TextBox,"",True,100,20,0,783,366,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine.txtModel.MaxLength(30)
+Gui.frmWindMachine.txtModel.TabStop(True)
+Gui.frmWindMachine.txtModel.TabIndex(34)
+Gui.frmWindMachine.txtModel.ControlGroup(20)
+Gui.frmWindMachine.lbl36.Create(Label,"OR Sat Cell",True,54,13,0,664,397,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl36.BorderStyle(0)
+Gui.frmWindMachine.lbl36.ControlGroup(20)
+Gui.frmWindMachine.ddlORSatCell.Create(DropDownList)
+Gui.frmWindMachine.ddlORSatCell.Enabled(True)
+Gui.frmWindMachine.ddlORSatCell.Visible(True)
+Gui.frmWindMachine.ddlORSatCell.Zorder(0)
+Gui.frmWindMachine.ddlORSatCell.Size(40,20)
+Gui.frmWindMachine.ddlORSatCell.Position(664,412)
+Gui.frmWindMachine.ddlORSatCell.FontName("Tahoma")
+Gui.frmWindMachine.ddlORSatCell.FontSize(8.25)
+Gui.frmWindMachine.ddlORSatCell.TabStop(True)
+Gui.frmWindMachine.ddlORSatCell.TabIndex(37)
+Gui.frmWindMachine.ddlORSatCell.ControlGroup(20)
+Gui.frmWindMachine.lbl37.Create(Label,"Install",True,29,13,0,428,441,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine.lbl37.BorderStyle(0)
+Gui.frmWindMachine.dtpInstall.Create(DatePicker)
+Gui.frmWindMachine.dtpInstall.Enabled(True)
+Gui.frmWindMachine.dtpInstall.Visible(True)
+Gui.frmWindMachine.dtpInstall.Zorder(0)
+Gui.frmWindMachine.dtpInstall.Size(100,20)
+Gui.frmWindMachine.dtpInstall.Position(428,454)
+Gui.frmWindMachine.dtpInstall.CheckBox(False)
+Gui.frmWindMachine.dtpInstall.FontName("Tahoma")
+Gui.frmWindMachine.dtpInstall.FontSize(8.25)
+Gui.frmWindMachine.chkAutoStart.Create(CheckBox)
+Gui.frmWindMachine.chkAutoStart.Enabled(True)
+Gui.frmWindMachine.chkAutoStart.Visible(True)
+Gui.frmWindMachine.chkAutoStart.Zorder(0)
+Gui.frmWindMachine.chkAutoStart.Size(84,20)
+Gui.frmWindMachine.chkAutoStart.Position(428,366)
+Gui.frmWindMachine.chkAutoStart.Caption("Auto Start")
+Gui.frmWindMachine.chkAutoStart.FontName("Tahoma")
+Gui.frmWindMachine.chkAutoStart.FontSize(8.25)
+Gui.frmDeleteConfirm..Create(DialogForm)
+Gui.frmDeleteConfirm..Caption("Delete this machine?")
+Gui.frmDeleteConfirm..Size(300,110)
+Gui.frmDeleteConfirm..MinX(0)
+Gui.frmDeleteConfirm..MinY(0)
+Gui.frmDeleteConfirm..Position(0,0)
+Gui.frmDeleteConfirm..AlwaysOnTop(True)
+Gui.frmDeleteConfirm..FontName("Tahoma")
+Gui.frmDeleteConfirm..FontSize(8.25)
+Gui.frmDeleteConfirm..MousePointer(0)
+Gui.frmDeleteConfirm..DialogStyle(4)
+Gui.frmDeleteConfirm..Moveable(False)
+Gui.frmDeleteConfirm..Sizeable(False)
+Gui.frmDeleteConfirm..ShowInTaskBar(True)
+Gui.frmDeleteConfirm..TitleBar(True)
+Gui.frmDeleteConfirm..Prompt("Continue with deleting this machine?")
+Gui.frmDeleteConfirm..Event(SelectionMade,frmDeleteConfirm_SelectionMade)
+Gui.frmDeleteConfirm.lblMachineID.Create(Label,"Label",False,25,13,0,23,-20,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDeleteConfirm.lblMachineID.BorderStyle(0)
+Gui.frmDeleteConfirm.lblForm.Create(Label,"Label",False,25,13,0,142,-4,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDeleteConfirm.lblForm.BorderStyle(0)
+Gui.frmWindMachine_Extra..Create(DashForm)
+Gui.frmWindMachine_Extra..Caption("Wind Machine Extra Maintenance")
+Gui.frmWindMachine_Extra..Size(915,503)
+Gui.frmWindMachine_Extra..MinX(0)
+Gui.frmWindMachine_Extra..MinY(0)
+Gui.frmWindMachine_Extra..Position(0,0)
+Gui.frmWindMachine_Extra..AlwaysOnTop(False)
+Gui.frmWindMachine_Extra..FontName("Tahoma")
+Gui.frmWindMachine_Extra..FontSize(8.25)
+Gui.frmWindMachine_Extra..ControlBox(True)
+Gui.frmWindMachine_Extra..MaxButton(False)
+Gui.frmWindMachine_Extra..MinButton(False)
+Gui.frmWindMachine_Extra..MousePointer(0)
+Gui.frmWindMachine_Extra..Moveable(True)
+Gui.frmWindMachine_Extra..Sizeable(False)
+Gui.frmWindMachine_Extra..ShowInTaskBar(True)
+Gui.frmWindMachine_Extra..TitleBar(True)
+Gui.frmWindMachine_Extra..BarSaveButton(True,False)
+Gui.frmWindMachine_Extra..Event(UnLoad,frmWindMachine_Extra_UnLoad)
+Gui.frmWindMachine_Extra..Event(SaveButtonClick,frmWindMachine_Extra_SaveButtonClick)
+Gui.frmWindMachine_Extra.lbl1.Create(Label,"Machine ID",True,53,13,0,6,8,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl1.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl1.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtMachineID.Create(TextBox,"",True,100,20,0,6,21,False,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtMachineID.MaxLength(6)
+Gui.frmWindMachine_Extra.txtMachineID.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl2.Create(Label,"Orchard Block Number",True,106,13,0,6,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl2.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl2.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtOrchardBlockNumber.Create(TextBox,"",True,100,20,0,6,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtOrchardBlockNumber.MaxLength(6)
+Gui.frmWindMachine_Extra.txtOrchardBlockNumber.TabStop(True)
+Gui.frmWindMachine_Extra.txtOrchardBlockNumber.TabIndex(1)
+Gui.frmWindMachine_Extra.txtOrchardBlockNumber.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl3.Create(Label,"Closest Road Access",True,99,13,0,123,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl3.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl3.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtClosestRoadAccess.Create(TextBox,"",True,335,20,0,123,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtClosestRoadAccess.MaxLength(30)
+Gui.frmWindMachine_Extra.txtClosestRoadAccess.TabStop(True)
+Gui.frmWindMachine_Extra.txtClosestRoadAccess.TabIndex(2)
+Gui.frmWindMachine_Extra.txtClosestRoadAccess.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl4.Create(Label,"Closest Ave Access",True,93,13,0,475,50,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl4.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl4.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtClosestAveAccess.Create(TextBox,"",True,335,20,0,476,63,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtClosestAveAccess.MaxLength(30)
+Gui.frmWindMachine_Extra.txtClosestAveAccess.TabStop(True)
+Gui.frmWindMachine_Extra.txtClosestAveAccess.TabIndex(3)
+Gui.frmWindMachine_Extra.txtClosestAveAccess.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl5.Create(Label,"WM Manufacture",True,82,13,0,6,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl5.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl5.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtWMManufacture.Create(TextBox,"",True,100,20,0,6,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtWMManufacture.MaxLength(30)
+Gui.frmWindMachine_Extra.txtWMManufacture.TabStop(True)
+Gui.frmWindMachine_Extra.txtWMManufacture.TabIndex(4)
+Gui.frmWindMachine_Extra.txtWMManufacture.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl6.Create(Label,"WM Model",True,49,13,0,123,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl6.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl6.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtWMModel.Create(TextBox,"",True,100,20,0,123,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtWMModel.MaxLength(30)
+Gui.frmWindMachine_Extra.txtWMModel.TabStop(True)
+Gui.frmWindMachine_Extra.txtWMModel.TabIndex(5)
+Gui.frmWindMachine_Extra.txtWMModel.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl7.Create(Label,"Type of Tower",True,70,13,0,240,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl7.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl7.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfTower.Create(TextBox,"",True,100,20,0,240,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfTower.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfTower.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfTower.TabIndex(6)
+Gui.frmWindMachine_Extra.txtTypeOfTower.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl8.Create(Label,"Type of Fan",True,58,13,0,357,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl8.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl8.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfFan.Create(TextBox,"",True,100,20,0,357,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfFan.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfFan.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfFan.TabIndex(7)
+Gui.frmWindMachine_Extra.txtTypeOfFan.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl9.Create(Label,"Type of Fan Hub",True,80,13,0,475,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl9.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl9.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfFanHub.Create(TextBox,"",True,100,20,0,475,104,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfFanHub.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfFanHub.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfFanHub.TabIndex(8)
+Gui.frmWindMachine_Extra.txtTypeOfFanHub.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl10.Create(Label,"Type of Fan Rotation",True,102,13,0,591,91,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl10.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl10.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl11.Create(Label,"Type of Top Head",True,86,13,0,6,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl11.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl11.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfTopHead.Create(TextBox,"",True,100,20,0,6,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfTopHead.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfTopHead.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfTopHead.TabIndex(10)
+Gui.frmWindMachine_Extra.txtTypeOfTopHead.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl12.Create(Label,"Type of Tower Rotation",True,114,13,0,123,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl12.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl12.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.Create(TextBox,"",True,100,20,0,123,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.TabIndex(11)
+Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl13.Create(Label,"Type of Bell",True,56,13,0,240,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl13.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl13.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfBell.Create(TextBox,"",True,100,20,0,240,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfBell.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfBell.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfBell.TabIndex(12)
+Gui.frmWindMachine_Extra.txtTypeOfBell.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl14.Create(Label,"Type / Lower Gear Box",True,110,13,0,357,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl14.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl14.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.Create(TextBox,"",True,100,20,0,357,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.MaxLength(30)
+Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.TabStop(True)
+Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.TabIndex(13)
+Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl15.Create(Label,"Power Comp Meter Num",True,115,13,0,475,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl15.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl15.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtPowerCompMeterNum.Create(TextBox,"",True,100,20,0,475,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtPowerCompMeterNum.MaxLength(30)
+Gui.frmWindMachine_Extra.txtPowerCompMeterNum.TabStop(True)
+Gui.frmWindMachine_Extra.txtPowerCompMeterNum.TabIndex(14)
+Gui.frmWindMachine_Extra.txtPowerCompMeterNum.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl16.Create(Label,"Power Comp Plant Num",True,111,13,0,591,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl16.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl16.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtPowerCompPlantNum.Create(TextBox,"",True,100,20,0,591,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtPowerCompPlantNum.MaxLength(30)
+Gui.frmWindMachine_Extra.txtPowerCompPlantNum.TabStop(True)
+Gui.frmWindMachine_Extra.txtPowerCompPlantNum.TabIndex(15)
+Gui.frmWindMachine_Extra.txtPowerCompPlantNum.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl17.Create(Label,"Power Comp Name",True,90,13,0,710,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl17.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl17.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtPowerCompName.Create(TextBox,"",True,100,20,0,710,148,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtPowerCompName.MaxLength(30)
+Gui.frmWindMachine_Extra.txtPowerCompName.TabStop(True)
+Gui.frmWindMachine_Extra.txtPowerCompName.TabIndex(16)
+Gui.frmWindMachine_Extra.txtPowerCompName.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl18.Create(Label,"Engine Usage Hours",True,96,13,0,6,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl18.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl18.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.Create(TextBox,"",True,100,20,0,6,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.MaxLength(6)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.TabIndex(17)
+Gui.frmWindMachine_Extra.txtEngineUsageHours.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl19.Create(Label,"Engine Horsepower",True,93,13,0,123,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl19.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl19.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.Create(TextBox,"",True,100,20,0,123,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.MaxLength(4)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.TabIndex(18)
+Gui.frmWindMachine_Extra.txtEngineHorsepower.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl20.Create(Label,"Engine Timing",True,65,13,0,240,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl20.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl20.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineTiming.Create(TextBox,"",True,100,20,0,240,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineTiming.MaxLength(2)
+Gui.frmWindMachine_Extra.txtEngineTiming.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineTiming.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineTiming.TabIndex(19)
+Gui.frmWindMachine_Extra.txtEngineTiming.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl21.Create(Label,"Engine Vacuum",True,72,13,0,357,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl21.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl21.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineVacuum.Create(TextBox,"",True,100,20,0,357,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineVacuum.MaxLength(2)
+Gui.frmWindMachine_Extra.txtEngineVacuum.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineVacuum.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineVacuum.TabIndex(20)
+Gui.frmWindMachine_Extra.txtEngineVacuum.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl22.Create(Label,"Engine Dwell",True,60,13,0,475,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl22.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl22.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineDwell.Create(TextBox,"",True,100,20,0,475,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineDwell.MaxLength(2)
+Gui.frmWindMachine_Extra.txtEngineDwell.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineDwell.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineDwell.TabIndex(21)
+Gui.frmWindMachine_Extra.txtEngineDwell.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl23.Create(Label,"Engine RPM",True,56,13,0,591,178,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl23.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl23.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtEngineRPM.Create(TextBox,"",True,50,20,0,591,191,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtEngineRPM.MaxLength(4)
+Gui.frmWindMachine_Extra.txtEngineRPM.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtEngineRPM.TabStop(True)
+Gui.frmWindMachine_Extra.txtEngineRPM.TabIndex(22)
+Gui.frmWindMachine_Extra.txtEngineRPM.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl24.Create(Label,"Customer Mach #",True,85,13,0,6,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl24.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl24.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtCustomerMachineNumber.Create(TextBox,"",True,100,20,0,6,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtCustomerMachineNumber.MaxLength(30)
+Gui.frmWindMachine_Extra.txtCustomerMachineNumber.TabStop(True)
+Gui.frmWindMachine_Extra.txtCustomerMachineNumber.TabIndex(24)
+Gui.frmWindMachine_Extra.txtCustomerMachineNumber.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl25.Create(Label,"Customer Mach Letter",True,106,13,0,123,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl25.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl25.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtCustomerMachineLetter.Create(TextBox,"",True,100,20,0,123,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtCustomerMachineLetter.MaxLength(30)
+Gui.frmWindMachine_Extra.txtCustomerMachineLetter.TabStop(True)
+Gui.frmWindMachine_Extra.txtCustomerMachineLetter.TabIndex(25)
+Gui.frmWindMachine_Extra.txtCustomerMachineLetter.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl26.Create(Label,"Rotation Motor Mfg",True,93,13,0,240,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl26.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl26.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtRotationMotorMfg.Create(TextBox,"",True,100,20,0,240,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtRotationMotorMfg.MaxLength(30)
+Gui.frmWindMachine_Extra.txtRotationMotorMfg.TabStop(True)
+Gui.frmWindMachine_Extra.txtRotationMotorMfg.TabIndex(26)
+Gui.frmWindMachine_Extra.txtRotationMotorMfg.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl27.Create(Label,"Meter Can Mfg",True,71,13,0,357,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl27.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl27.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtMeterCanMfg.Create(TextBox,"",True,100,20,0,357,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtMeterCanMfg.MaxLength(30)
+Gui.frmWindMachine_Extra.txtMeterCanMfg.TabStop(True)
+Gui.frmWindMachine_Extra.txtMeterCanMfg.TabIndex(27)
+Gui.frmWindMachine_Extra.txtMeterCanMfg.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl28.Create(Label,"Electric Panel Mfg",True,84,13,0,475,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl28.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl28.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtElectricPanelMfg.Create(TextBox,"",True,100,20,0,475,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtElectricPanelMfg.MaxLength(30)
+Gui.frmWindMachine_Extra.txtElectricPanelMfg.TabStop(True)
+Gui.frmWindMachine_Extra.txtElectricPanelMfg.TabIndex(28)
+Gui.frmWindMachine_Extra.txtElectricPanelMfg.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl29.Create(Label,"Head Rotation Time",True,94,13,0,591,221,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl29.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl29.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.Create(TextBox,"",True,100,20,0,591,234,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.MaxLength(4)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.TabStop(True)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.TabIndex(29)
+Gui.frmWindMachine_Extra.txtHeadRotationTime.ControlGroup(30)
+Gui.frmWindMachine_Extra.chkTrackingGood.Create(CheckBox)
+Gui.frmWindMachine_Extra.chkTrackingGood.Enabled(True)
+Gui.frmWindMachine_Extra.chkTrackingGood.Visible(True)
+Gui.frmWindMachine_Extra.chkTrackingGood.Zorder(0)
+Gui.frmWindMachine_Extra.chkTrackingGood.Size(93,20)
+Gui.frmWindMachine_Extra.chkTrackingGood.Position(710,191)
+Gui.frmWindMachine_Extra.chkTrackingGood.Caption("Tracking Good")
+Gui.frmWindMachine_Extra.chkTrackingGood.FontName("Tahoma")
+Gui.frmWindMachine_Extra.chkTrackingGood.FontSize(8.25)
+Gui.frmWindMachine_Extra.chkTrackingGood.TabStop(True)
+Gui.frmWindMachine_Extra.chkTrackingGood.TabIndex(23)
+Gui.frmWindMachine_Extra.chkTrackingGood.ControlGroup(30)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Create(CheckBox)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Enabled(True)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Visible(True)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Zorder(0)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Size(130,20)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Position(710,234)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Caption("Phase Motor Installed")
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.FontName("Tahoma")
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.FontSize(8.25)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.TabStop(True)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.TabIndex(30)
+Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl30.Create(Label,"Motor Frame Number",True,101,13,0,6,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl30.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl30.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtMotorFrameNumber.Create(TextBox,"",True,100,20,0,6,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtMotorFrameNumber.MaxLength(30)
+Gui.frmWindMachine_Extra.txtMotorFrameNumber.TabStop(True)
+Gui.frmWindMachine_Extra.txtMotorFrameNumber.TabIndex(31)
+Gui.frmWindMachine_Extra.txtMotorFrameNumber.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl31.Create(Label,"L1 Amp",True,35,13,0,123,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl31.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl31.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl32.Create(Label,"L2 Amp",True,35,13,0,240,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl32.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl32.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl33.Create(Label,"L3 Amp",True,35,13,0,357,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl33.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl33.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtL1Amp.Create(TextBox,"",True,50,20,0,123,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtL1Amp.MaxLength(3)
+Gui.frmWindMachine_Extra.txtL1Amp.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtL1Amp.TabStop(True)
+Gui.frmWindMachine_Extra.txtL1Amp.TabIndex(32)
+Gui.frmWindMachine_Extra.txtL1Amp.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtL2Amp.Create(TextBox,"",True,50,20,0,240,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtL2Amp.MaxLength(3)
+Gui.frmWindMachine_Extra.txtL2Amp.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtL2Amp.TabStop(True)
+Gui.frmWindMachine_Extra.txtL2Amp.TabIndex(33)
+Gui.frmWindMachine_Extra.txtL2Amp.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtL3Amp.Create(TextBox,"",True,50,20,0,357,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtL3Amp.MaxLength(3)
+Gui.frmWindMachine_Extra.txtL3Amp.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtL3Amp.TabStop(True)
+Gui.frmWindMachine_Extra.txtL3Amp.TabIndex(34)
+Gui.frmWindMachine_Extra.txtL3Amp.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl34.Create(Label,"M1",True,14,13,0,475,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl34.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl34.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl35.Create(Label,"M2",True,14,13,0,591,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl35.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl35.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl36.Create(Label,"M3",True,14,13,0,710,265,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl36.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl36.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtM1.Create(TextBox,"",True,50,20,0,475,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtM1.MaxLength(3)
+Gui.frmWindMachine_Extra.txtM1.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtM1.TabStop(True)
+Gui.frmWindMachine_Extra.txtM1.TabIndex(35)
+Gui.frmWindMachine_Extra.txtM1.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtM2.Create(TextBox,"",True,50,20,0,591,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtM2.MaxLength(3)
+Gui.frmWindMachine_Extra.txtM2.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtM2.TabStop(True)
+Gui.frmWindMachine_Extra.txtM2.TabIndex(36)
+Gui.frmWindMachine_Extra.txtM2.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtM3.Create(TextBox,"",True,50,20,0,710,278,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtM3.MaxLength(3)
+Gui.frmWindMachine_Extra.txtM3.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtM3.TabStop(True)
+Gui.frmWindMachine_Extra.txtM3.TabIndex(37)
+Gui.frmWindMachine_Extra.txtM3.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl37.Create(Label,"Key Number",True,58,13,0,6,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl37.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl37.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtKeyNumber.Create(TextBox,"",True,100,20,0,6,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtKeyNumber.MaxLength(30)
+Gui.frmWindMachine_Extra.txtKeyNumber.TabStop(True)
+Gui.frmWindMachine_Extra.txtKeyNumber.TabIndex(38)
+Gui.frmWindMachine_Extra.txtKeyNumber.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl38.Create(Label,"Driving Conditions",True,86,13,0,123,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl38.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl38.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtDrivingConditions.Create(TextBox,"",True,100,20,0,123,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtDrivingConditions.MaxLength(30)
+Gui.frmWindMachine_Extra.txtDrivingConditions.TabStop(True)
+Gui.frmWindMachine_Extra.txtDrivingConditions.TabIndex(39)
+Gui.frmWindMachine_Extra.txtDrivingConditions.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl39.Create(Label,"Customer Block Letter",True,105,13,0,240,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl39.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl39.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtCustomerBlockLetter.Create(TextBox,"",True,100,20,0,240,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtCustomerBlockLetter.MaxLength(30)
+Gui.frmWindMachine_Extra.txtCustomerBlockLetter.TabStop(True)
+Gui.frmWindMachine_Extra.txtCustomerBlockLetter.TabIndex(40)
+Gui.frmWindMachine_Extra.txtCustomerBlockLetter.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl40.Create(Label,"Electric Motor Mfg",True,86,13,0,357,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl40.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl40.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtElectricMotorMfg.Create(TextBox,"",True,100,20,0,357,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtElectricMotorMfg.MaxLength(30)
+Gui.frmWindMachine_Extra.txtElectricMotorMfg.TabStop(True)
+Gui.frmWindMachine_Extra.txtElectricMotorMfg.TabIndex(41)
+Gui.frmWindMachine_Extra.txtElectricMotorMfg.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl41.Create(Label,"Electric Motor RPM",True,89,13,0,475,309,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl41.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl41.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.Create(TextBox,"",True,50,20,0,475,322,True,0,"Tahoma",8.25,,1)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.MaxLength(4)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.NumericOnly(2)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.TabStop(True)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.TabIndex(42)
+Gui.frmWindMachine_Extra.txtElectricMotorRPM.ControlGroup(30)
+Gui.frmWindMachine_Extra.lbl42.Create(Label,"Comments",True,50,13,0,6,354,True,0,"Tahoma",8.25,,0,0)
+Gui.frmWindMachine_Extra.lbl42.BorderStyle(0)
+Gui.frmWindMachine_Extra.lbl42.ControlGroup(30)
+Gui.frmWindMachine_Extra.txtComments.Create(TextboxM)
+Gui.frmWindMachine_Extra.txtComments.Enabled(True)
+Gui.frmWindMachine_Extra.txtComments.Visible(True)
+Gui.frmWindMachine_Extra.txtComments.Zorder(0)
+Gui.frmWindMachine_Extra.txtComments.Size(800,80)
+Gui.frmWindMachine_Extra.txtComments.Position(62,354)
+Gui.frmWindMachine_Extra.txtComments.FontName("Tahoma")
+Gui.frmWindMachine_Extra.txtComments.FontSize(8.25)
+Gui.frmWindMachine_Extra.txtComments.TabStop(True)
+Gui.frmWindMachine_Extra.txtComments.TabIndex(43)
+Gui.frmWindMachine_Extra.txtComments.ControlGroup(30)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Create(DropDownList)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Enabled(True)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Visible(True)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Zorder(0)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Size(50,20)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Position(591,104)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.FontName("Tahoma")
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.FontSize(8.25)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.TabStop(True)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.TabIndex(9)
+Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.ControlGroup(30)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bLoadData.Declare
+V.Global.sMode.Declare
+V.Global.iARCID.Declare
+V.Global.sGridViews.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Machine Dashboard for Orchard-Rite
+'by Josh Withrow
+'If something breaks, contact somebody else.
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+V.Local.sArt.Declare
+
+'*************************************************************************************************
+'************* Start Dashboard Template Stuff
+
+'Set Gss Logo
+'This is only applicable if a baseform is being used with the big ol' GSS logo front and center.
+'F.Intrinsic.String.Build("{0}\GAB_GSS_Logo_Green_Dash.png",V.Caller.ArtDir,V.Local.sArt)
+F.Intrinsic.String.Build("{0}\GAB_GSS_Logo_Green_Dash.png",V.Caller.GasDir,V.Local.sArt)
+Gui.frmMain.picGSSLogo.Picture(V.Local.sArt)
+
+'Set Application Icons for all forms...
+'See that pretty GSS icon in the upper left corner of your screen in the title bar?  That's what should be there...  not rainbow squares.
+'If this is only applied to one form, only supply the form name, no delimiters.
+'F.Intrinsic.Control.CallSub(SetApplicationIcon,"sForms","frmMain")
+'F.Intrinsic.Control.CallSub(SetApplicationIcon,"sForms","frmMain*!*frmShaker*!*frmWindMachine*!*frmWindMachine_Extra*!*frmDeleteConfirm")
+
+'Set list of controls (grids) that should have their preferences saved.  You know, so they grids load the same way the user left them.
+'FORMNAME*!*CONTROLNAME*!*GRIDVIEWNAME#$#form*!*gsgridcontrol*!*gridview#$#etc*!*etc*!*etc
+'Wash/rinse/repeat for each gridview that you want to store.
+'If there is only one gridview to maintain, only supply the single reference.
+'V.Global.sGridViews.Set("frmMain*!*GsGCWindMachines*!*gvWindMachines")
+V.Global.sGridViews.Set("frmMain*!*GsGCWindMachines*!*gvWindMachines#$#frmMain*!*GsGCShakers*!*gvShakers")
+
+'Set standard context menus for each grid.
+'sGridControls: FORMNAME*!*GSGRIDCONTROLNAME*!*CONTEXTMENUNAME#$# etc etc
+'	If only a single gridview, only provide a single list of controls.  eg, "frmMain*!*GsGCShakers*!*CTXShakers"
+'sContextMenuItems: ITEMNAME *!* ITEMCAPTION *!* EVENTHANDLER #$# etc etc
+'	If only a single context menu item, only provide a single list of controls. eg, "Refresh*!*Refresh*!*cmdRefresh_Click"
+F.Intrinsic.Control.CallSub(SetContextMenus,"sGridControls","frmMain*!*GsGCShakers*!*CTXShakers#$#frmMain*!*GsGCWindMachines*!*CTXWindMachines","sContextMenuItems","AddNew*!*Add New*!*cmdAddNew_Click#$#Refresh*!*Refresh*!*cmdRefresh_Click#$#Export*!*Export*!*ExportGrids#$#ResetColumns*!*Reset Columns*!*ResetGridColumns")
+
+'Set Anchors
+'For the primary control layout items, anchor them to an area of the screen and then resize is automagic.
+'0 - None
+'1 - Top
+'2 - Bottom
+'4 - Left
+'8 - Right
+Gui.frmMain.picGSSLogo.Anchor(1)
+Gui.frmMain.framePermissions.Anchor(9)
+Gui.frmMain.tabTabs.Anchor(15)
+
+'Set ARC ID
+'Grabs the ARCID from the filename for use with saving/restoring grid preferences.  So make sure you stick with the file naming convention!
+'Typical file naming convention: DDD_IIII_Description.g2u
+'DDD=Department (GCG, ATG, GAB, etc.)
+'IIII=Reserved ARC ID (5849, 1234, whatever)
+'Description=Short Description of Project
+'Example: GCG_5849_UltimateDashboard.g2u
+F.Intrinsic.Control.CallSub(SetARCID)
+
+'************* End Dashboard Template Stuff
+'*************************************************************************************************
+
+'Everything beyond this point isn't tied to the "template", but is just regular project programming.
+
+'Open DB Connection
+F.ODBC.Connection!con.OpenCompanyConnection(500)
+
+F.Intrinsic.Control.CallSub(CheckDatabase)
+
+Gui.frmMain.tabTabs.SetTab(0)
+
+Gui.frmMain..Show
+
+F.Intrinsic.Control.BlockEvents
+
+'Load Dropdownlists
+F.Intrinsic.Control.CallSub(LoadStates)
+F.Intrinsic.Control.CallSub(LoadRotation)
+F.Intrinsic.Control.CallSub(LoadAutoStart)
+F.Intrinsic.Control.CallSub(LoadORSatCell)
+F.Intrinsic.Control.CallSub(LoadFWO)
+F.Intrinsic.Control.CallSub(frmShaker_Unload)
+F.Intrinsic.Control.CallSub(frmWindMachine_Unload)
+
+'Load Data
+F.Intrinsic.Control.CallSub(LoadData_Shakers)
+F.Intrinsic.Control.CallSub(LoadData_WindMachines)
+
+F.Intrinsic.Control.UnBlockEvents
+
+'load grid preferences
+F.Intrinsic.Control.CallSub(Deserialize)
+
+Gui.frmMain.lblStatus.Visible(False)
+
+Program.Sub.Main.End
+
+Program.Sub.SetApplicationIcon.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sArt.Declare
+		V.Local.sForm.Declare
+		V.Local.sFormName.Declare
+		V.Local.iCnt.Declare
+		V.Local.bIsCollection.Declare
+		
+		'Set Application Icon
+		'F.Intrinsic.String.Build("{0}\GSS2.ico",V.Caller.ArtDir,V.Local.sArt)
+		F.Intrinsic.String.Build("{0}\GSS2.ico",V.Caller.GasDir,V.Local.sArt)
+		
+		F.Intrinsic.String.Split(V.Args.sForms,"*!*",V.Local.sForm)
+		'Set application icon for each form
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sForm.UBound,1)
+			V.Local.sFormName.Set(V.Local.sForm(V.Local.iCnt))
+			Gui.[V.Local.sFormName]..Icon(V.Local.sArt)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetApplicationIcon.End
+
+Program.Sub.Catching.Start
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}",V.Caller.ScriptFile,V.Ambient.NewLine,v.Args.sub,V.Args.errorno,V.args.errordesc,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Program.Sub.Catching.End
+
+Program.Sub.SetContextMenus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iCnt.Declare
+		V.Local.sControls.Declare
+		
+		V.Local.sControlList.Declare
+		V.Local.sFormName.Declare
+		V.Local.sGridControlName.Declare
+		V.Local.sContextMenuName.Declare
+			
+		F.Intrinsic.String.Split(V.Args.sGridControls,"#$#",V.Local.sControls)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sControls.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sControls(V.Local.iCnt),"*!*",V.Local.sControlList)
+			V.Local.sFormName.Set(V.Local.sControlList(0))
+			V.Local.sGridControlName.Set(V.Local.sControlList(1))
+			V.Local.sContextMenuName.Set(V.Local.sControlList(2))
+			Gui.[V.Local.sFormName]..ContextMenuCreate(V.Local.sContextMenuName)
+			Gui.[V.Local.sFormName].[V.Local.sGridControlName].ContextMenuAttach(V.Local.sContextMenuName)
+			F.Intrinsic.Control.CallSub(SetContextMenuItems,"sFormName",V.Local.sFormName,"sContextMenuName",V.Local.sContextMenuName,"sContextMenuItems",V.Args.sContextMenuItems)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.SetContextMenuItems.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iCnt.Declare
+		V.Local.sContextMenuItems.Declare
+		V.Local.sContextMenuItem.Declare
+		V.Local.sContextMenuItemName.Declare
+		V.Local.sContextMenuCaption.Declare
+		V.Local.sContextMenuEventHandler.Declare
+		
+		F.Intrinsic.String.Split(V.Args.sContextMenuItems,"#$#",V.Local.sContextMenuItems)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sContextMenuItems.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sContextMenuItems(V.Local.iCnt),"*!*",V.Local.sContextMenuItem)
+			V.Local.sContextMenuItemName.Set(V.Local.sContextMenuItem(0))
+			V.Local.sContextMenuCaption.Set(V.Local.sContextMenuItem(1))
+			V.Local.sContextMenuEventHandler.Set(V.Local.sContextMenuItem(2))
+			Gui.[V.Args.sFormName]..ContextMenuAddItem(V.Args.sContextMenuName,V.Local.sContextMenuItemName,0,V.Local.sContextMenuCaption)
+			Gui.[V.Args.sFormName]..ContextMenuSetItemEventHandler(V.Args.sContextMenuName,V.Local.sContextMenuItemName,V.Local.sContextMenuEventHandler)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenuItems.End
+
+Program.Sub.SetARCID.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sFile.Declare
+		V.Local.sName.Declare
+		V.Local.sNameSplit.Declare
+		
+		F.Intrinsic.String.Split(V.Caller.ScriptFile,"\",V.Local.sFile)
+		F.Intrinsic.String.Split(V.Local.sFile(V.Local.sFile.UBound),".",V.Local.sName)
+		F.Intrinsic.String.Split(V.Local.sName,"_",V.Local.sNameSplit)
+		V.Global.iARCID.Set(V.Local.sNameSplit(1).Long)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetARCID.End
+
+Program.Sub.Serialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sControls.Declare
+		V.Local.sSerialize.Declare
+		V.Local.iCnt.Declare
+		
+		V.Local.sControlList.Declare
+		V.Local.sForm.Declare
+		V.Local.sGridControl.Declare
+		V.Local.sGridView.Declare
+		
+		F.Intrinsic.String.Split(V.Global.sGridViews,"#$#",V.Local.sControls)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sControls.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sControls(V.Local.iCnt),"*!*",V.Local.sControlList)
+			V.Local.sForm.Set(V.Local.sControlList(0))
+			V.Local.sGridControl.Set(V.Local.sControlList(1))
+			V.Local.sGridView.Set(V.Local.sControlList(2))
+			Gui.[V.Local.sForm].[V.Local.sGridControl].Serialize(V.Local.sGridView,V.Local.sSerialize)
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,V.Local.sGridView,V.Global.iARCID,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+			V.Local.sSerialize.Set("")
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sControls.Declare
+		V.Local.sSerialize.Declare
+		V.Local.iCnt.Declare
+		
+		V.Local.sControlList.Declare
+		V.Local.sForm.Declare
+		V.Local.sGridControl.Declare
+		V.Local.sGridView.Declare
+		
+		F.Intrinsic.String.Split(V.Global.sGridViews,"#$#",V.Local.sControls)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sControls.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sControls(V.Local.iCnt),"*!*",V.Local.sControlList)
+			V.Local.sForm.Set(V.Local.sControlList(0))
+			V.Local.sGridControl.Set(V.Local.sControlList(1))
+			V.Local.sGridView.Set(V.Local.sControlList(2))
+			F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,V.Local.sGridView,V.Global.iARCID,1000,6,"",V.Local.sSerialize)
+			F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+				Gui.[V.Local.sForm].[V.Local.sGridControl].Deserialize(V.Local.sSerialize)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.frmMain_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmMain_UnLoad.End
+
+Program.Sub.cmdAddNew_Click.Start
+	V.Global.sMode.Set("ADD")
+	'When grid was clicked, it passed V.Args.MenuName as one of the parameters of 
+	F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+		F.Intrinsic.Control.Case("CTXSHAKERS")
+			Gui.frmShaker.lbl1.Visible(False)
+			gui.frmShaker.txtMachineID.Visible(False)
+			gui.frmShaker..Visible(True)
+			gui.frmShaker..SetFocus
+		F.Intrinsic.Control.Case("CTXWINDMACHINES")
+			Gui.frmWindMachine.lbl1.Visible(False)
+			gui.frmWindMachine.txtMachineID.Visible(False)
+			gui.frmWindMachine..ClearScreen
+			gui.frmWindMachine..Visible(True)
+			gui.frmWindMachine..SetFocus
+	F.Intrinsic.Control.EndSelect
+Program.Sub.cmdAddNew_Click.End
+
+Program.Sub.ExportGrids.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.bExcel.Declare
+		V.Local.sExt.Declare
+		V.Local.sControl.Declare
+		V.Local.sFileExport.Declare
+		V.Local.bFileLocked.Declare
+		V.Local.sMsg.Declare
+		
+		F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+			F.Intrinsic.Control.Case("CTXSHAKERS")
+				V.Local.sControl.Set("GsGCShakers")
+			F.Intrinsic.Control.Case("CTXWINDMACHINES")
+				V.Local.sControl.Set("GsGCWindMachines")
+		F.Intrinsic.Control.EndSelect
+		
+		F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+		F.Intrinsic.Control.If(V.Local.bExcel)
+			V.Local.sExt.Set("xlsx")
+		F.Intrinsic.Control.Else
+			V.Local.sExt.Set("csv")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("{0}\GAB_5849_{1}_Export.{2}",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sExt,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmMain.[V.Local.sControl].Export(V.Local.sFileExport,V.Local.sExt)
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.ExportGrids.End
+
+Program.Sub.ResetGridColumns.Start
+	F.Intrinsic.Control.Try
+		V.Local.sError.Declare
+		
+		V.Local.sSerialize.Declare
+		
+		F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+			F.Intrinsic.Control.Case("CTXSHAKERS")
+				F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVShakers",V.Global.iARCID,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+				
+			F.Intrinsic.Control.Case("CTXWINDMACHINES")
+				F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVWindMachines",V.Global.iARCID,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		F.Intrinsic.Control.EndSelect
+		
+		V.Global.bLoadData.Set(False)
+		F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.ResetGridColumns.End
+
+Program.Sub.cmdRefresh_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.BlockEvents
+		F.Intrinsic.Control.CallSub(LoadData_Shakers)
+		F.Intrinsic.Control.CallSub(LoadData_WindMachines)
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.CallSub(Deserialize)
+		Gui.frmMain.lblStatus.Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.LoadData_Shakers.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sFilter.Declare
+		
+		Gui.frmMain.lblStatus.Visible(True)
+		Gui.frmMain.lblStatus.ForeColor(V.Color.Black)
+		Gui.frmMain.lblStatus.Caption("Loading Data...")
+		F.Intrinsic.Control.If(V.DataTable.dtShakers.Exists)
+			F.Data.DataTable.Close("dtShakers")
+		F.Intrinsic.Control.EndIf
+		
+		V.Global.bLoadData.Set(True)
+		
+		'F.Data.DataTable.CreateFromSQL("dtShakers","con","SELECT 'Edit' '^Edit', 'Delete' '^Delete', MACHINEID 'Machine ID', CUSTOMER, CUSTOMER_NAME, GROWER, STREET 'Street Address', CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, TAX_CODE, NUT_TYPE, MACHINE_TYPE, SERVICED, BRAND, TACH_HOURS, MACHINE_NUMBER 'Machine Serial #', SERVICE_TYPE, ENGINE_TYPE, MACH_USE, ENGINE_NUMBER 'Engine Serial #', CONTACT 'Service Contact', CONTACT_STREET 'Contact Street Address', CONTACT_CITY, CONTACT_STATE, CONTACT_ZIP_CODE, CONTACT_PHONE_NUMBER 'Service Phone', AIR_CAB, ROTARY_SWEEPS, HEAD_STYLE, HYDRAULIC_UPDATES, FWO_FORMAT 'FWO Format', HYDRASHAKE, COMMENTS FROM GCG_5849_TREE_SHAKER order by MACHINEID",True)
+		F.Data.DataTable.CreateFromSQL("dtShakers","con","SELECT 'Edit' '^Edit', 'Delete' '^Delete', MACHINEID 'Machine ID', CUSTOMER, CUSTOMER_NAME, GROWER, STREET 'Street Address', CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, TAX_CODE, NUT_TYPE, MACHINE_TYPE, SERVICED, BRAND, TACH_HOURS, MACHINE_NUMBER 'Machine Serial #', ENGINE_TYPE, ENGINE_NUMBER 'Engine Serial #', CONTACT 'Service Contact', CONTACT_STREET 'Contact Street Address', CONTACT_CITY, CONTACT_STATE, CONTACT_ZIP_CODE, CONTACT_PHONE_NUMBER 'Service Phone', HEAD_STYLE, FWO_FORMAT 'FWO Format', HYDRASHAKE, COMMENTS FROM GCG_5849_TREE_SHAKER order by MACHINEID",True)
+		
+		F.Intrinsic.Control.CallSub(LoadGV,"DT","dtShakers","GV","gvShakers","GSGC","GsGCShakers")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadData_Shakers.End
+
+Program.Sub.LoadData_WindMachines.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sFilter.Declare
+		
+		Gui.frmMain.lblStatus.Visible(True)
+		Gui.frmMain.lblStatus.ForeColor(V.Color.Black)
+		Gui.frmMain.lblStatus.Caption("Loading Data...")
+		F.Intrinsic.Control.If(V.DataTable.dtWindMachines.Exists)
+			F.Data.DataTable.Close("dtWindMachines")
+		F.Intrinsic.Control.EndIf
+		
+		V.Global.bLoadData.Set(True)
+		
+		F.Data.DataTable.CreateFromSQL("dtWindMachines","con","SELECT 'Edit' '^Edit', 'Delete' '^Delete', A.MACHINEID 'Machine ID', A.CUSTOMER, A.ORCHARD, A.CUSTOMER_NAME, A.GROWER, A.STREET, A.CITY, A.STATE, A.ZIP_CODE, A.PHONE, A.CONTRACT_NUMBER, A.AREA, A.MACHINE_NUMBER, A.BLADE_NUMBER, A.TOP_BOX_NUMBER, A.BOTTOM_NUMBER, A.TOWER_NUMBER, A.ENGINE_NUMBER, A.FRUIT_TYPE, A.INSTALLED, A.SERVICED, A.MACHINE_TYPE, A.ENGINE_TYPE, A.FUEL_TYPE, A.BRAND, A.SERVICE_TYPE, A.TAX_CODE, A.TILT, A.FWO_FORMAT, A.CONTOUR_CUT, A.ROTATION, A.EXT_WARRANTY, A.AUTO_START, A.CLUTCH, A.LATTITUDE, A.DOG_LEG, A.LONGITUDE, A.MODEL, A.OR_SAT_CELL, A.INSTALL, B.ORCHARD_BLOCK_NUMBER, B.CLOSEST_ROAD_ACCESS, B.CLOSEST_AVE_ACCESS, B.WM_MANUFACTURE, B.WM_MODEL, B.TYPE_OF_TOWER, B.TYPE_OF_FAN, B.TYPE_OF_FAN_HUB, B.TYPE_OF_FAN_ROTATION, B.TYPE_OF_TOP_HEAD, B.TYPE_OF_TOWER_ROTATION, B.TYPE_OF_BELL, B.TYPE_OF_LOWER_GEAR_BOX, B.POWER_COMP_METER_NUM, B.POWER_COMP_PLANT_NUM, B.POWER_COMP_NAME, B.ENGINE_USAGE_HOURS, B.ENGINE_HORSEPOWER, B.ENGINE_TIMING, B.ENGINE_VACUUM, B.ENGINE_DWELL, B.ENGINE_RPM, B.CUST_MACH_NUMBER, B.CUST_MACH_LETTER, B.ROTATION_MOTOR_MFG, B.METER_CAN_MFG, B.ELECTRIC_PANEL_MFG, B.HEAD_ROTATION_TIME, B.TRACKING_GOOD, B.PHASE_MOTOR_INSTALLED, B.MOTOR_FRAME_NUMBER, B.L1_AMP, B.L2_AMP, B.L3_AMP, B.M1, B.M2, B.M3, B.KEY_NUMBER, B.DRIVING_CONDITIONS, B.CUSTOMER_BLOCK_LETTER, B.ELE_MOTOR_MFG, B.ELE_MOTOR_RPM, B.COMMENTS FROM GCG_5849_WIND_MACHINE A LEFT OUTER JOIN GCG_5849_MACHINE_EXTRA B ON A.MACHINEID=B.MACHINEID order by A.MACHINEID",True)
+		
+		F.Intrinsic.Control.CallSub(LoadGV,"DT","dtWindMachines","GV","gvWindMachines","GSGC","GsGCWindMachines")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadData_WindMachines.End
+
+Program.Sub.LoadGV.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iRet.Declare
+		V.Local.iCnt.Declare
+		V.Local.sFieldNames.Declare
+		V.Local.sColumns.Declare
+		V.Local.sColumnName.Declare
+		V.Local.bHold.Declare
+		v.Local.sRet.Declare(String)
+		
+		Gui.frmMain.[V.Args.GSGC].AddGridViewFromDataTable(V.Args.GV,V.Args.DT)
+		Gui.frmMain.[V.Args.GSGC].SuspendLayout()
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"MultiSelect",False)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"OptionBehaviorEditable",False)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"AllowSort",True)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"AllowFilter",True)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"ReadOnly",True)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"OptionsDetailShowDetailTabs",False)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"OptionsViewShowGroupPanel",True)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"OptionsViewColumnAutoWidth",False)
+		Gui.frmMain.[V.Args.GSGC].SetGridViewProperty(V.Args.GV,"OptionsFindAlwaysVisible",True)
+		
+		'Loop through columns names by using the V.DataTable.dtName.FieldNames
+		'Adding some special use columns to the beginning of the field names.  Manual fields beginning with ^ are buttons (for me in this project).
+		'F.Intrinsic.String.Concat("^Edit*!*^Delete*!*",V.DataTable.[V.Args.DT].FieldNames,V.Local.sFieldNames)
+		F.Intrinsic.String.Concat("",V.DataTable.[V.Args.DT].FieldNames,V.Local.sFieldNames)
+		F.Intrinsic.String.Split(V.Local.sFieldNames,"*!*",V.Local.sColumns)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sColumns.UBound,1)
+		
+			F.Intrinsic.Control.If(V.Local.sColumns(V.Local.iCnt).Left01,=,"^")
+				'Command column (functional button/checkbox/something)
+				'for me, in this project, a prefix of ^ is a button
+				'These are injected from the SQL Query (just literal columns)
+				'Name of column starts with ^ in this case, value returned is just the caption of the button
+				'SELECT 'Edit' AS '^Edit', 'Delete' AS '^Delete' From Table
+				
+				'Caption Formatting...  but I turned the captions off for this column type
+				'F.Intrinsic.String.Mid(V.Local.sColumns(V.Local.iCnt),2,V.Local.sColumnName)
+				'F.Intrinsic.String.Replace(V.Local.sColumnName,"_"," ",V.Local.sColumnName)
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"VisibleIndex",V.Local.iCnt)
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"HeaderHAlignment","Center")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"CellHAlignment","Center")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"CellBackColor","DarkGray")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"MinWidth","45")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"ShowCaption",False)
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"Fixed","Left")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"AllowSort",False)
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"AllowFilter",False)
+				
+			F.Intrinsic.Control.Else
+				'"standard" data column (not a button, etc)
+				
+				'Caption Formatting...
+				V.Local.sColumnName.Set(V.Local.sColumns(V.Local.iCnt))
+				F.Intrinsic.String.Replace(V.Local.sColumnName,"_"," ",V.Local.sColumnName)
+				
+				'Other Properties
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"VisibleIndex",V.Local.iCnt)
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"HeaderHAlignment","Left")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"CellHAlignment","Left")
+				Gui.frmMain.[V.Args.GSGC].SetColumnProperty(V.Args.GV,V.Local.sColumns(V.Local.iCnt),"Caption",V.Local.sColumnName.PCase)
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+		Gui.frmMain.[V.Args.GSGC].ResumeLayout()
+		Gui.frmMain.[V.Args.GSGC].MainView(V.Args.GV)
+		
+		Gui.frmMain.lblStatus.Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGV.End
+
+Program.Sub.optPermissions_Click.Start
+Program.Sub.optPermissions_Click.End
+
+Program.Sub.frmShaker_UnLoad.Start
+	F.Intrinsic.Control.BlockEvents
+	V.Global.sMode.Set("")
+	
+	Gui.frmShaker.txtMachineID.Text("")
+	Gui.frmShaker.txtCustomer.Text("")
+	Gui.frmShaker.txtCustomerName.Text("")
+	Gui.frmShaker.txtGrower.Text("")
+	Gui.frmShaker.txtStreetAddress.Text("")
+	Gui.frmShaker.txtCity.Text("")
+	Gui.frmShaker.ddlState.Text("")
+	Gui.frmShaker.txtZipCode.Text("")
+	Gui.frmShaker.txtPhone.Text("")
+	Gui.frmShaker.txtContractNumber.Text("")
+	Gui.frmShaker.txtTaxCode.Text("")
+	Gui.frmShaker.txtNutType.Text("")
+	Gui.frmShaker.txtMachineType.Text("")
+	Gui.frmShaker.dtpServiced.Value("1900-01-01")
+	Gui.frmShaker.txtBrand.Text("")
+	Gui.frmShaker.txtTachHours.Text("")
+	Gui.frmShaker.txtMachineNumber.Text("")
+	Gui.frmShaker.txtServiceType.Text("")
+	Gui.frmShaker.txtEngineType.Text("")
+	Gui.frmShaker.txtMachineUse.Text("")
+	Gui.frmShaker.txtEngineNumber.Text("")
+	Gui.frmShaker.txtContactName.Text("")
+	Gui.frmShaker.txtContactStreet.Text("")
+	Gui.frmShaker.txtContactCity.Text("")
+	Gui.frmShaker.ddlContactState.Text("")
+	Gui.frmShaker.txtContactZipCode.Text("")
+	Gui.frmShaker.txtContactPhone.Text("")
+	Gui.frmShaker.chkAirCab.Value(0)
+	Gui.frmShaker.chkRotarySweeps.Value(0)
+	Gui.frmShaker.chkHeadStyle.Value(0)
+	Gui.frmShaker.chkHydraulicUpdates.Value(0)
+	Gui.frmShaker.ddlFWOFormat.Text("C")
+	Gui.frmShaker.chkHydrashake.Value(0)
+	
+	Gui.frmShaker..Visible(False)
+	Gui.frmMain..SetFocus
+	F.Intrinsic.Control.UnBlockEvents
+Program.Sub.frmShaker_UnLoad.End
+
+Program.Sub.frmWindMachine_UnLoad.Start
+	F.Intrinsic.Control.BlockEvents
+	V.Global.sMode.Set("")
+
+	Gui.frmWindMachine.txtMachineID.Text("")
+	Gui.frmWindMachine.txtCustomer.Text("")
+	Gui.frmWindMachine.txtOrchard.Text("")
+	Gui.frmWindMachine.txtCustomerName.Text("")
+	Gui.frmWindMachine.txtGrower.Text("")
+	Gui.frmWindMachine.txtStreetAddress.Text("")
+	Gui.frmWindMachine.txtCity.Text("")
+	Gui.frmWindMachine.ddlState.Text("")
+	Gui.frmWindMachine.txtZipCode.Text("")
+	Gui.frmWindMachine.txtPhone.Text("")
+	Gui.frmWindMachine.txtContractNumber.Text("")
+	Gui.frmWindMachine.txtArea.Text("")
+	Gui.frmWindMachine.txtMachineNumber.Text("")
+	Gui.frmWindMachine.txtBladeNumber.Text("")
+	Gui.frmWindMachine.txtTopBoxNumber.Text("")
+	Gui.frmWindMachine.txtBottomNumber.Text("")
+	Gui.frmWindMachine.txtTowerNumber.Text("")
+	Gui.frmWindMachine.txtEngineNumber.Text("")
+	Gui.frmWindMachine.txtFruitType.Text("")
+	Gui.frmWindMachine.dtpInstalled.Value("1900-01-01")
+	Gui.frmWindMachine.dtpServiced.Value("1900-01-01")
+	Gui.frmWindMachine.txtMachineType.Text("")
+	Gui.frmWindMachine.txtEngineType.Text("")
+	Gui.frmWindMachine.txtFuelType.Text("")
+	Gui.frmWindMachine.txtBrand.Text("")
+	Gui.frmWindMachine.txtServiceType.Text("")
+	Gui.frmWindMachine.txtTaxCode.Text("")
+	Gui.frmWindMachine.txtTilt.Text("")
+	Gui.frmWindMachine.ddlFWOFormat.Text("")
+	Gui.frmWindMachine.txtContourCut.Text("")
+	Gui.frmWindMachine.ddlRotation.Text("")
+	Gui.frmWindMachine.chkExtendedWarranty.Value(0)
+	Gui.frmWindMachine.chkAutoStart.Value(0)
+	gui.frmWindMachine.ddlClutch.Text("")
+	Gui.frmWindMachine.txtLatitude.Text("")
+	Gui.frmWindMachine.chkDogLeg.Value(0)
+	Gui.frmWindMachine.txtLongitude.Text("")
+	Gui.frmWindMachine.txtModel.Text("")
+	Gui.frmWindMachine.ddlORSatCell.Text("")
+	Gui.frmWindMachine.dtpInstall.Value("1900-01-01")
+	
+	Gui.frmWindMachine_Extra.txtMachineID.Text("")
+	Gui.frmWindMachine_Extra.txtOrchardBlockNumber.Text("")
+	Gui.frmWindMachine_Extra.txtClosestRoadAccess.Text("")
+	Gui.frmWindMachine_Extra.txtClosestAveAccess.Text("")
+	Gui.frmWindMachine_Extra.txtWMManufacture.Text("")
+	Gui.frmWindMachine_Extra.txtWMModel.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfTower.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfFan.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfFanHub.Text("")
+	Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfTopHead.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfBell.Text("")
+	Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.Text("")
+	Gui.frmWindMachine_Extra.txtPowerCompMeterNum.Text("")
+	Gui.frmWindMachine_Extra.txtPowerCompPlantNum.Text("")
+	Gui.frmWindMachine_Extra.txtPowerCompName.Text("")
+	Gui.frmWindMachine_Extra.txtEngineUsageHours.Text("")
+	Gui.frmWindMachine_Extra.txtEngineHorsepower.Text("")
+	Gui.frmWindMachine_Extra.txtEngineTiming.Text("")
+	Gui.frmWindMachine_Extra.txtEngineVacuum.Text("")
+	Gui.frmWindMachine_Extra.txtEngineDwell.Text("")
+	Gui.frmWindMachine_Extra.txtEngineRPM.Text("")
+	Gui.frmWindMachine_Extra.txtCustomerMachineNumber.Text("")
+	Gui.frmWindMachine_Extra.txtCustomerMachineLetter.Text("")
+	Gui.frmWindMachine_Extra.txtRotationMotorMfg.Text("")
+	Gui.frmWindMachine_Extra.txtMeterCanMfg.Text("")
+	Gui.frmWindMachine_Extra.txtElectricPanelMfg.Text("")
+	Gui.frmWindMachine_Extra.txtHeadRotationTime.Text("")
+	Gui.frmWindMachine_Extra.chkTrackingGood.Value(0)
+	Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Value(0)
+	Gui.frmWindMachine_Extra.txtMotorFrameNumber.Text("")
+	Gui.frmWindMachine_Extra.txtL1Amp.Text("")
+	Gui.frmWindMachine_Extra.txtL2Amp.Text("")
+	Gui.frmWindMachine_Extra.txtL3Amp.Text("")
+	Gui.frmWindMachine_Extra.txtM1.Text("")
+	Gui.frmWindMachine_Extra.txtM2.Text("")
+	Gui.frmWindMachine_Extra.txtM3.Text("")
+	Gui.frmWindMachine_Extra.txtKeyNumber.Text("")
+	Gui.frmWindMachine_Extra.txtDrivingConditions.Text("")
+	Gui.frmWindMachine_Extra.txtCustomerBlockLetter.Text("")
+	Gui.frmWindMachine_Extra.txtElectricMotorMfg.Text("")
+	Gui.frmWindMachine_Extra.txtElectricMotorRPM.Text("")
+	Gui.frmWindMachine_Extra.txtComments.Text("")
+	
+	Gui.frmWindMachine..Visible(False)
+	Gui.frmMain..SetFocus
+	F.Intrinsic.Control.UnBlockEvents
+Program.Sub.frmWindMachine_UnLoad.End
+
+Program.Sub.frmWindMachine_Extra_UnLoad.Start
+	F.Intrinsic.Control.BlockEvents
+	
+	Gui.frmWindMachine_Extra..Visible(False)
+	Gui.frmWindMachine..Visible(True)
+	Gui.frmWindMachine..SetFocus
+	
+	F.Intrinsic.Control.UnBlockEvents
+Program.Sub.frmWindMachine_Extra_UnLoad.End
+
+Program.Sub.cmdCustomerLookup_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		'Customer Lookup
+		'Where to get TAX CODE from?
+		V.Local.sRet.Declare
+		V.Local.sSQL.Declare
+		V.Local.sCustomer.Declare
+		F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+			F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+			F.Intrinsic.String.Build("select CUSTOMER, NAME_CUSTOMER, ADDRESS1, CITY, STATE, ZIP, TELEPHONE from V_CUSTOMER_MASTER where CUSTOMER='{0}'",V.Local.sRet(0),V.Local.sSQL)
+			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sCustomer)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Split(V.Local.sCustomer,"*!*",V.Local.sCustomer)	
+		F.Intrinsic.Control.SelectCase(V.Args.Screen)
+			F.Intrinsic.Control.Case("FRMSHAKER")
+				Gui.frmShaker.txtCustomer.Text(V.Local.sCustomer(0))
+				Gui.frmShaker.txtCustomerName.Text(V.Local.sCustomer(1).Trim)
+				Gui.frmShaker.txtGrower.Text(V.Local.sCustomer(1).Trim)
+				Gui.frmShaker.txtStreetAddress.Text(V.Local.sCustomer(2).Trim)
+				Gui.frmShaker.txtCity.Text(V.Local.sCustomer(3).Trim)
+				Gui.frmShaker.ddlState.Text(V.Local.sCustomer(4).Trim)
+				Gui.frmShaker.txtZipCode.Text(V.Local.sCustomer(5).Trim)
+				Gui.frmShaker.txtPhone.Text(V.Local.sCustomer(6).Trim)
+			F.Intrinsic.Control.Case("FRMWINDMACHINE")
+				Gui.frmWindMachine.txtCustomer.Text(V.Local.sCustomer(0))
+				Gui.frmWindMachine.txtCustomerName.Text(V.Local.sCustomer(1).Trim)
+				Gui.frmWindMachine.txtGrower.Text(V.Local.sCustomer(1).Trim)
+				Gui.frmWindMachine.txtOrchard.Text(V.Local.sCustomer(1).Trim)
+				Gui.frmWindMachine.txtStreetAddress.Text(V.Local.sCustomer(2).Trim)
+				Gui.frmWindMachine.txtCity.Text(V.Local.sCustomer(3).Trim)
+				Gui.frmWindMachine.ddlState.Text(V.Local.sCustomer(4).Trim)
+				Gui.frmWindMachine.txtZipCode.Text(V.Local.sCustomer(5).Trim)
+				Gui.frmWindMachine.txtPhone.Text(V.Local.sCustomer(6).Trim)
+		F.Intrinsic.Control.EndSelect
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdCustomerLookup_Click.End
+
+Program.Sub.frmShaker_SaveAllButtonClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'MACHINEID, CUSTOMER, CUSTOMER_NAME, GROWER, STREET, CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, TAX_CODE, NUT_TYPE, MACHINE_TYPE, SERVICED, BRAND, TACH_HOURS, 
+		'0          1         2              3       4       5     6      7         8      9                10        11        12            13        14     15          
+		'MACHINE_NUMBER, SERVICE_TYPE, ENGINE_TYPE, MACH_USE, ENGINE_NUMBER, CONTACT, CONTACT_STREET, CONTACT_CITY, CONTACT_STATE, CONTACT_ZIP_CODE, CONTACT_PHONE_NUMBER,
+		'16              17            18           19        20             21       22              23            24             25                26
+		'AIR_CAB, ROTARY_SWEEPS, HEAD_STYLE, HYDRAULIC_UPDATES, FWO_FORMAT, HYDRASHAKE, COMMENTS
+		'27       28             29          30                 31          32          33
+		F.Intrinsic.Control.BlockEvents
+		V.Local.sSQL.Declare
+		V.Local.dtServiced.Declare(String)
+		F.Intrinsic.String.Format(V.Screen.frmShaker!dtpServiced.Value,"yyyy-MM-dd",V.Local.dtServiced)
+		F.Intrinsic.Control.SelectCase(V.Global.sMode.UCase)
+			F.Intrinsic.Control.Case("ADD")
+				F.Intrinsic.Control.CallSub("GetNextMachineID","sTable","TREE_SHAKER") 'returns V.Args.iNextMachineID
+				F.Intrinsic.String.Build("insert into GCG_5849_TREE_SHAKER (MACHINEID, CUSTOMER, CUSTOMER_NAME, GROWER, STREET, CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, TAX_CODE, NUT_TYPE, MACHINE_TYPE, SERVICED, BRAND, TACH_HOURS, MACHINE_NUMBER, SERVICE_TYPE, ENGINE_TYPE, MACH_USE, ENGINE_NUMBER, CONTACT, CONTACT_STREET, CONTACT_CITY, CONTACT_STATE, CONTACT_ZIP_CODE, CONTACT_PHONE_NUMBER, AIR_CAB, ROTARY_SWEEPS, HEAD_STYLE, HYDRAULIC_UPDATES, FWO_FORMAT, HYDRASHAKE, COMMENTS) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}')",V.Args.iNextMachineID,V.Screen.frmShaker!txtCustomer.Text,V.Screen.frmShaker!txtCustomerName.Text,V.Screen.frmShaker!txtGrower.Text,V.Screen.frmShaker!txtStreetAddress.Text,V.Screen.frmShaker!txtCity.Text,V.Screen.frmShaker!ddlState.Text,V.Screen.frmShaker!txtZipCode.Text,V.Screen.frmShaker!txtPhone.Text,V.Screen.frmShaker!txtContractNumber.Text,V.Screen.frmShaker!txtTaxCode.Text,V.Screen.frmShaker!txtNutType.Text,V.Screen.frmShaker!txtHeadStyle.Text,V.Local.dtServiced,V.Screen.frmShaker!txtBrand.Text,V.Screen.frmShaker!txtTachHours.Text,V.Screen.frmShaker!txtMachineNumber.Text,V.Screen.frmShaker!txtServiceType.Text,V.Screen.frmShaker!txtEngineType.Text,V.Screen.frmShaker!txtMachineUse.Text,V.Screen.frmShaker!txtEngineNumber.Text,V.Screen.frmShaker!txtContactName.Text,V.Screen.frmShaker!txtContactStreet.Text,V.Screen.frmShaker!txtContactCity.Text,V.Screen.frmShaker!ddlContactState.Text,V.Screen.frmShaker!txtContactZipCode.Text,V.Screen.frmShaker!txtContactPhone.Text,V.Screen.frmShaker!chkAirCab.Value,V.Screen.frmShaker!chkRotarySweeps.Value,V.Screen.frmShaker!txtHeadStyle.Text,V.Screen.frmShaker!chkHydraulicUpdates.Value,V.Screen.frmShaker!ddlFWOFormat.Text,V.Screen.frmShaker!chkHydrashake.Value,V.Screen.frmShaker!txtComments.Text,V.Local.sSQL)
+			F.Intrinsic.Control.Case("EDIT")
+				F.Intrinsic.String.Build("update GCG_5849_TREE_SHAKER set CUSTOMER='{1}', CUSTOMER_NAME='{2}', GROWER='{3}', STREET='{4}', CITY='{5}', STATE='{6}', ZIP_CODE='{7}', PHONE='{8}', CONTRACT_NUMBER='{9}', TAX_CODE='{10}', NUT_TYPE='{11}', MACHINE_TYPE='{12}', SERVICED='{13}', BRAND='{14}', TACH_HOURS='{15}', MACHINE_NUMBER='{16}', SERVICE_TYPE='{17}', ENGINE_TYPE='{18}', MACH_USE='{19}', ENGINE_NUMBER='{20}', CONTACT='{21}', CONTACT_STREET='{22}', CONTACT_CITY='{23}', CONTACT_STATE='{24}', CONTACT_ZIP_CODE='{25}', CONTACT_PHONE_NUMBER='{26}', AIR_CAB='{27}', ROTARY_SWEEPS='{28}', HEAD_STYLE='{29}', HYDRAULIC_UPDATES='{30}', FWO_FORMAT='{31}', HYDRASHAKE='{32}', COMMENTS='{33}' where MACHINEID='{0}'",V.Screen.frmShaker!txtMachineID.Text,V.Screen.frmShaker!txtCustomer.Text,V.Screen.frmShaker!txtCustomerName.Text,V.Screen.frmShaker!txtGrower.Text,V.Screen.frmShaker!txtStreetAddress.Text,V.Screen.frmShaker!txtCity.Text,V.Screen.frmShaker!ddlState.Text,V.Screen.frmShaker!txtZipCode.Text,V.Screen.frmShaker!txtPhone.Text,V.Screen.frmShaker!txtContractNumber.Text,V.Screen.frmShaker!txtTaxCode.Text,V.Screen.frmShaker!txtNutType.Text,V.Screen.frmShaker!txtHeadStyle.Text,V.Local.dtServiced,V.Screen.frmShaker!txtBrand.Text,V.Screen.frmShaker!txtTachHours.Text,V.Screen.frmShaker!txtMachineNumber.Text,V.Screen.frmShaker!txtServiceType.Text,V.Screen.frmShaker!txtEngineType.Text,V.Screen.frmShaker!txtMachineUse.Text,V.Screen.frmShaker!txtEngineNumber.Text,V.Screen.frmShaker!txtContactName.Text,V.Screen.frmShaker!txtContactStreet.Text,V.Screen.frmShaker!txtContactCity.Text,V.Screen.frmShaker!ddlContactState.Text,V.Screen.frmShaker!txtContactZipCode.Text,V.Screen.frmShaker!txtContactPhone.Text,V.Screen.frmShaker!chkAirCab.Value,V.Screen.frmShaker!chkRotarySweeps.Value,V.Screen.frmShaker!txtHeadStyle.Text,V.Screen.frmShaker!chkHydraulicUpdates.Value,V.Screen.frmShaker!ddlFWOFormat.Text,V.Screen.frmShaker!chkHydrashake.Value,V.Screen.frmShaker!txtComments.Text,V.Local.sSQL)
+		F.Intrinsic.Control.EndSelect
+		
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		
+		F.Intrinsic.Control.CallSub(frmShaker_UnLoad)
+		F.Intrinsic.Control.CallSub(LoadData_Shakers)
+		Gui.frmMain..SetFocus
+		F.Intrinsic.Control.UnBlockEvents
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmShaker_SaveAllButtonClick.End
+
+Program.Sub.frmWindMachine_SaveAllButtonClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+		
+		'== WIND MACHINE TABLE
+		'MACHINEID, CUSTOMER, ORCHARD, CUSTOMER_NAME, GROWER, STREET, CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, AREA, MACHINE_NUMBER, BLADE_NUMBER, TOP_BOX_NUMBER, BOTTOM_NUMBER, 
+		'0          1         2        3              4       5       6     7      8         9      10               11    12              13            14              15 
+		'TOWER_NUMBER, ENGINE_NUMBER, FRUIT_TYPE, INSTALLED, SERVICED, MACHINE_TYPE, ENGINE_TYPE, FUEL_TYPE, BRAND, SERVICE_TYPE, TAX_CODE, TILT, FWO_FORMAT, CONTOUR_CUT, ROTATION
+		'16            17             18          19         20        21            22           23         24     25            26        27    28          29           30 
+		'EXT_WARRANTY, AUTO_START, LATTITUDE, DOG_LEG, LONGITUDE, MODEL, OR_SAT_CELL, INSTALL, CLUTCH
+		'31            32          33         34       35         36     37           38       39
+		'
+		'== MACHINE EXTRA TABLE
+		'MACHINEID, ORCHARD_BLOCK_NUMBER, CLOSEST_ROAD_ACCESS, CLOSEST_AVE_ACCESS, WM_MANUFACTURE, WM_MODEL, TYPE_OF_TOWER, TYPE_OF_FAN, TYPE_OF_FAN_HUB, TYPE_OF_FAN_ROTATION, TYPE_OF_TOP_HEAD, 
+		'0          1                     2                    3                   4               5         6              7            8                9                     10   
+		'TYPE_OF_TOWER_ROTATION, TYPE_OF_BELL, TYPE_OF_LOWER_GEAR_BOX, POWER_COMP_METER_NUM, POWER_COMP_PLANT_NUM, POWER_COMP_NAME, ENGINE_USAGE_HOURS, ENGINE_HORSEPOWER, ENGINE_TIMING,
+		'11                      12            13                      14                    15                    16               17                  18                 19  
+		'ENGINE_VACUUM, ENGINE_DWELL, ENGINE_RPM, CUST_MACH_NUMBER, CUST_MACH_LETTER, ROTATION_MOTOR_MFG, METER_CAN_MFG, ELECTRIC_PANEL_MFG, HEAD_ROTATION_TIME, TRACKING_GOOD, PHASE_MOTOR_INSTALLED,
+		'20             21            22          23                24                25                  26             27                  28                  29             30        
+		'MOTOR_FRAME_NUMBER, L1_AMP, L2_AMP, L3_AMP, M1, M2, M3, KEY_NUMBER, DRIVING_CONDITIONS, CUSTOMER_BLOCK_LETTER, ELE_MOTOR_MFG, ELE_MOTOR_RPM, COMMENTS
+		'31                  32      33      34      35  36  37  38          39                  40                     41             42             43
+		
+		F.Intrinsic.Control.BlockEvents
+		V.Local.sSQL.Declare
+		V.Local.dtInstalled.Declare(String)
+		V.Local.dtServiced.Declare(String)
+		V.Local.dtInstall.Declare(String)
+		F.Intrinsic.String.Format(V.Screen.frmWindMachine!dtpInstalled.Value,"yyyy-MM-dd",V.Local.dtInstalled)
+		F.Intrinsic.String.Format(V.Screen.frmWindMachine!dtpServiced.Value,"yyyy-MM-dd",V.Local.dtServiced)
+		F.Intrinsic.String.Format(V.Screen.frmWindMachine!dtpInstall.Value,"yyyy-MM-dd",V.Local.dtInstall)
+		F.Intrinsic.Control.SelectCase(V.Global.sMode.UCase)
+			F.Intrinsic.Control.Case("ADD")
+				F.Intrinsic.Control.CallSub("GetNextMachineID","sTable","WIND_MACHINE") 'returns V.Args.iNextMachineID
+				F.Intrinsic.String.Build("insert into GCG_5849_WIND_MACHINE (MACHINEID, CUSTOMER, ORCHARD, CUSTOMER_NAME, GROWER, STREET, CITY, STATE, ZIP_CODE, PHONE, CONTRACT_NUMBER, AREA, MACHINE_NUMBER, BLADE_NUMBER, TOP_BOX_NUMBER, BOTTOM_NUMBER,TOWER_NUMBER, ENGINE_NUMBER, FRUIT_TYPE, INSTALLED, SERVICED, MACHINE_TYPE, ENGINE_TYPE, FUEL_TYPE, BRAND, SERVICE_TYPE, TAX_CODE, TILT, FWO_FORMAT, CONTOUR_CUT, ROTATION,EXT_WARRANTY, AUTO_START, LATTITUDE, DOG_LEG, LONGITUDE, MODEL, OR_SAT_CELL, INSTALL, CLUTCH) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}','{38}','{39}')",V.Args.iNextMachineID,V.Screen.frmWindMachine!txtCustomer.Text,V.Screen.frmWindMachine!txtOrchard.Text,V.Screen.frmWindMachine!txtCustomerName.Text,V.Screen.frmWindMachine!txtGrower.Text,V.Screen.frmWindMachine!txtStreetAddress.Text,V.Screen.frmWindMachine!txtCity.Text,V.Screen.frmWindMachine!ddlState.Text,V.Screen.frmWindMachine!txtZipCode.Text,V.Screen.frmWindMachine!txtPhone.Text,V.Screen.frmWindMachine!txtContractNumber.Text,V.Screen.frmWindMachine!txtArea.Text,V.Screen.frmWindMachine!txtMachineNumber.Text,V.Screen.frmWindMachine!txtBladeNumber.Text,V.Screen.frmWindMachine!txtTopBoxNumber.Text,V.Screen.frmWindMachine!txtBottomNumber.Text,V.Screen.frmWindMachine!txtTowerNumber.Text,V.Screen.frmWindMachine!txtEngineNumber.Text,V.Screen.frmWindMachine!txtFruitType.Text,V.Local.dtInstalled,V.Local.dtServiced,V.Screen.frmWindMachine!txtMachineType.Text,V.Screen.frmWindMachine!txtEngineType.Text,V.Screen.frmWindMachine!txtFuelType.Text,V.Screen.frmWindMachine!txtBrand.Text,V.Screen.frmWindMachine!txtServiceType.Text,V.Screen.frmWindMachine!txtTaxCode.Text,V.Screen.frmWindMachine!txtTilt.Text,V.Screen.frmWindMachine!ddlFWOFormat.Text,V.Screen.frmWindMachine!txtContourCut.Text,V.Screen.frmWindMachine!ddlRotation.Text,V.Screen.frmWindMachine!chkExtendedWarranty.Value,V.Screen.frmWindMachine!chkAutoStart.Value,V.Screen.frmWindMachine!txtLatitude.Text,V.Screen.frmWindMachine!chkDogLeg.Value,V.Screen.frmWindMachine!txtLongitude.Text,V.Screen.frmWindMachine!txtModel.Text,V.Screen.frmWindMachine!ddlORSatCell.Text,V.Local.dtInstall,V.Screen.frmWindMachine!ddlClutch.Text,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.Intrinsic.String.Build("insert into GCG_5849_MACHINE_EXTRA (MACHINEID, ORCHARD_BLOCK_NUMBER, CLOSEST_ROAD_ACCESS, CLOSEST_AVE_ACCESS, WM_MANUFACTURE, WM_MODEL, TYPE_OF_TOWER, TYPE_OF_FAN, TYPE_OF_FAN_HUB, TYPE_OF_FAN_ROTATION, TYPE_OF_TOP_HEAD, TYPE_OF_TOWER_ROTATION, TYPE_OF_BELL, TYPE_OF_LOWER_GEAR_BOX, POWER_COMP_METER_NUM, POWER_COMP_PLANT_NUM, POWER_COMP_NAME, ENGINE_USAGE_HOURS, ENGINE_HORSEPOWER, ENGINE_TIMING, ENGINE_VACUUM, ENGINE_DWELL, ENGINE_RPM, CUST_MACH_NUMBER, CUST_MACH_LETTER, ROTATION_MOTOR_MFG, METER_CAN_MFG, ELECTRIC_PANEL_MFG, HEAD_ROTATION_TIME, TRACKING_GOOD, PHASE_MOTOR_INSTALLED, MOTOR_FRAME_NUMBER, L1_AMP, L2_AMP, L3_AMP, M1, M2, M3, KEY_NUMBER, DRIVING_CONDITIONS, CUSTOMER_BLOCK_LETTER, ELE_MOTOR_MFG, ELE_MOTOR_RPM, COMMENTS) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}','{38}','{39}','{40}','{41}','{42}','{43}')",V.Args.iNextMachineID,V.Screen.frmWindMachine_Extra!txtOrchardBlockNumber.Text,V.Screen.frmWindMachine_Extra!txtClosestRoadAccess.Text,V.Screen.frmWindMachine_Extra!txtClosestAveAccess.Text,V.Screen.frmWindMachine_Extra!txtWMManufacture.Text,V.Screen.frmWindMachine_Extra!txtWMModel.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTower.Text,V.Screen.frmWindMachine_Extra!txtTypeOfFan.Text,V.Screen.frmWindMachine_Extra!txtTypeOfFanHub.Text,V.Screen.frmWindMachine_Extra!ddlTypeOfFanRotation.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTopHead.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTowerRotation.Text,V.Screen.frmWindMachine_Extra!txtTypeOfBell.Text,V.Screen.frmWindMachine_Extra!txtTypeOfLowerGearbox.Text,V.Screen.frmWindMachine_Extra!txtPowerCompMeterNum.Text,V.Screen.frmWindMachine_Extra!txtPowerCompPlantNum.Text,V.Screen.frmWindMachine_Extra!txtPowerCompName.Text,V.Screen.frmWindMachine_Extra!txtEngineUsageHours.Text,V.Screen.frmWindMachine_Extra!txtEngineHorsepower.Text,V.Screen.frmWindMachine_Extra!txtEngineTiming.Text,V.Screen.frmWindMachine_Extra!txtEngineVacuum.Text,V.Screen.frmWindMachine_Extra!txtEngineDwell.Text,V.Screen.frmWindMachine_Extra!txtEngineRPM.Text,V.Screen.frmWindMachine_Extra!txtCustomerMachineNumber.Text,V.Screen.frmWindMachine_Extra!txtCustomerMachineLetter.Text,V.Screen.frmWindMachine_Extra!txtRotationMotorMfg.Text,V.Screen.frmWindMachine_Extra!txtMeterCanMfg.Text,V.Screen.frmWindMachine_Extra!txtElectricPanelMfg.Text,V.Screen.frmWindMachine_Extra!txtHeadRotationTime.Text,V.Screen.frmWindMachine_Extra!chkTrackingGood.Value,V.Screen.frmWindMachine_Extra!chkPhaseMotorInstalled.Value,V.Screen.frmWindMachine_Extra!txtMotorFrameNumber.Text,V.Screen.frmWindMachine_Extra!txtL1Amp.Text,V.Screen.frmWindMachine_Extra!txtL2Amp.Text,V.Screen.frmWindMachine_Extra!txtL3Amp.Text,V.Screen.frmWindMachine_Extra!txtM1.Text,V.Screen.frmWindMachine_Extra!txtM2.Text,V.Screen.frmWindMachine_Extra!txtM3.Text,V.Screen.frmWindMachine_Extra!txtKeyNumber.Text,V.Screen.frmWindMachine_Extra!txtDrivingConditions.Text,V.Screen.frmWindMachine_Extra!txtCustomerBlockLetter.Text,V.Screen.frmWindMachine_Extra!txtElectricMotorMfg.Text,V.Screen.frmWindMachine_Extra!txtElectricMotorRPM.Text,V.Screen.frmWindMachine_Extra!txtComments.Text,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.Intrinsic.Control.Case("EDIT")
+				F.Intrinsic.String.Build("update GCG_5849_WIND_MACHINE set CUSTOMER='{1}', ORCHARD='{2}', CUSTOMER_NAME='{3}', GROWER='{4}', STREET='{5}', CITY='{6}', STATE='{7}', ZIP_CODE='{8}', PHONE='{9}', CONTRACT_NUMBER='{10}', AREA='{11}', MACHINE_NUMBER='{12}', BLADE_NUMBER='{13}', TOP_BOX_NUMBER='{14}', BOTTOM_NUMBER='{15}',TOWER_NUMBER='{16}', ENGINE_NUMBER='{17}', FRUIT_TYPE='{18}', INSTALLED='{19}', SERVICED='{20}', MACHINE_TYPE='{21}', ENGINE_TYPE='{22}', FUEL_TYPE='{23}', BRAND='{24}', SERVICE_TYPE='{25}', TAX_CODE='{26}', TILT='{27}', FWO_FORMAT='{28}', CONTOUR_CUT='{29}', ROTATION='{30}',EXT_WARRANTY='{31}', AUTO_START='{32}', LATTITUDE='{33}', DOG_LEG='{34}', LONGITUDE='{35}', MODEL='{36}', OR_SAT_CELL='{37}', INSTALL='{38}', CLUTCH='{39}' where MACHINEID='{0}'",V.Screen.frmWindMachine!txtMachineID.Text,V.Screen.frmWindMachine!txtCustomer.Text,V.Screen.frmWindMachine!txtOrchard.Text,V.Screen.frmWindMachine!txtCustomerName.Text,V.Screen.frmWindMachine!txtGrower.Text,V.Screen.frmWindMachine!txtStreetAddress.Text,V.Screen.frmWindMachine!txtCity.Text,V.Screen.frmWindMachine!ddlState.Text,V.Screen.frmWindMachine!txtZipCode.Text,V.Screen.frmWindMachine!txtPhone.Text,V.Screen.frmWindMachine!txtContractNumber.Text,V.Screen.frmWindMachine!txtArea.Text,V.Screen.frmWindMachine!txtMachineNumber.Text,V.Screen.frmWindMachine!txtBladeNumber.Text,V.Screen.frmWindMachine!txtTopBoxNumber.Text,V.Screen.frmWindMachine!txtBottomNumber.Text,V.Screen.frmWindMachine!txtTowerNumber.Text,V.Screen.frmWindMachine!txtEngineNumber.Text,V.Screen.frmWindMachine!txtFruitType.Text,V.Local.dtInstalled,V.Local.dtServiced,V.Screen.frmWindMachine!txtMachineType.Text,V.Screen.frmWindMachine!txtEngineType.Text,V.Screen.frmWindMachine!txtFuelType.Text,V.Screen.frmWindMachine!txtBrand.Text,V.Screen.frmWindMachine!txtServiceType.Text,V.Screen.frmWindMachine!txtTaxCode.Text,V.Screen.frmWindMachine!txtTilt.Text,V.Screen.frmWindMachine!ddlFWOFormat.Text,V.Screen.frmWindMachine!txtContourCut.Text,V.Screen.frmWindMachine!ddlRotation.Text,V.Screen.frmWindMachine!chkExtendedWarranty.Value,V.Screen.frmWindMachine!chkAutoStart.Value,V.Screen.frmWindMachine!txtLatitude.Text,V.Screen.frmWindMachine!chkDogLeg.Value,V.Screen.frmWindMachine!txtLongitude.Text,V.Screen.frmWindMachine!txtModel.Text,V.Screen.frmWindMachine!ddlORSatCell.Text,V.Local.dtInstall,V.Screen.frmWindMachine!ddlClutch.Text,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.Intrinsic.String.Build("update GCG_5849_MACHINE_EXTRA set ORCHARD_BLOCK_NUMBER='{1}', CLOSEST_ROAD_ACCESS='{2}', CLOSEST_AVE_ACCESS='{3}', WM_MANUFACTURE='{4}', WM_MODEL='{5}', TYPE_OF_TOWER='{6}', TYPE_OF_FAN='{7}', TYPE_OF_FAN_HUB='{8}', TYPE_OF_FAN_ROTATION='{9}', TYPE_OF_TOP_HEAD='{10}', TYPE_OF_TOWER_ROTATION='{11}', TYPE_OF_BELL='{12}', TYPE_OF_LOWER_GEAR_BOX='{13}', POWER_COMP_METER_NUM='{14}', POWER_COMP_PLANT_NUM='{15}', POWER_COMP_NAME='{16}', ENGINE_USAGE_HOURS='{17}', ENGINE_HORSEPOWER='{18}', ENGINE_TIMING='{19}', ENGINE_VACUUM='{20}', ENGINE_DWELL='{21}', ENGINE_RPM='{22}', CUST_MACH_NUMBER='{23}', CUST_MACH_LETTER='{24}', ROTATION_MOTOR_MFG='{25}', METER_CAN_MFG='{26}', ELECTRIC_PANEL_MFG='{27}', HEAD_ROTATION_TIME='{28}', TRACKING_GOOD='{29}', PHASE_MOTOR_INSTALLED='{30}', MOTOR_FRAME_NUMBER='{31}', L1_AMP='{32}', L2_AMP='{33}', L3_AMP='{34}', M1='{35}', M2='{36}', M3='{37}', KEY_NUMBER='{38}', DRIVING_CONDITIONS='{39}', CUSTOMER_BLOCK_LETTER='{40}', ELE_MOTOR_MFG='{41}', ELE_MOTOR_RPM='{42}', COMMENTS='{43}' WHERE MACHINEID='{0}'",V.Screen.frmWindMachine!txtMachineID.Text,V.Screen.frmWindMachine_Extra!txtOrchardBlockNumber.Text,V.Screen.frmWindMachine_Extra!txtClosestRoadAccess.Text,V.Screen.frmWindMachine_Extra!txtClosestAveAccess.Text,V.Screen.frmWindMachine_Extra!txtWMManufacture.Text,V.Screen.frmWindMachine_Extra!txtWMModel.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTower.Text,V.Screen.frmWindMachine_Extra!txtTypeOfFan.Text,V.Screen.frmWindMachine_Extra!txtTypeOfFanHub.Text,V.Screen.frmWindMachine_Extra!ddlTypeOfFanRotation.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTopHead.Text,V.Screen.frmWindMachine_Extra!txtTypeOfTowerRotation.Text,V.Screen.frmWindMachine_Extra!txtTypeOfBell.Text,V.Screen.frmWindMachine_Extra!txtTypeOfLowerGearbox.Text,V.Screen.frmWindMachine_Extra!txtPowerCompMeterNum.Text,V.Screen.frmWindMachine_Extra!txtPowerCompPlantNum.Text,V.Screen.frmWindMachine_Extra!txtPowerCompName.Text,V.Screen.frmWindMachine_Extra!txtEngineUsageHours.Text,V.Screen.frmWindMachine_Extra!txtEngineHorsepower.Text,V.Screen.frmWindMachine_Extra!txtEngineTiming.Text,V.Screen.frmWindMachine_Extra!txtEngineVacuum.Text,V.Screen.frmWindMachine_Extra!txtEngineDwell.Text,V.Screen.frmWindMachine_Extra!txtEngineRPM.Text,V.Screen.frmWindMachine_Extra!txtCustomerMachineNumber.Text,V.Screen.frmWindMachine_Extra!txtCustomerMachineLetter.Text,V.Screen.frmWindMachine_Extra!txtRotationMotorMfg.Text,V.Screen.frmWindMachine_Extra!txtMeterCanMfg.Text,V.Screen.frmWindMachine_Extra!txtElectricPanelMfg.Text,V.Screen.frmWindMachine_Extra!txtHeadRotationTime.Text,V.Screen.frmWindMachine_Extra!chkTrackingGood.Value,V.Screen.frmWindMachine_Extra!chkPhaseMotorInstalled.Value,V.Screen.frmWindMachine_Extra!txtMotorFrameNumber.Text,V.Screen.frmWindMachine_Extra!txtL1Amp.Text,V.Screen.frmWindMachine_Extra!txtL2Amp.Text,V.Screen.frmWindMachine_Extra!txtL3Amp.Text,V.Screen.frmWindMachine_Extra!txtM1.Text,V.Screen.frmWindMachine_Extra!txtM2.Text,V.Screen.frmWindMachine_Extra!txtM3.Text,V.Screen.frmWindMachine_Extra!txtKeyNumber.Text,V.Screen.frmWindMachine_Extra!txtDrivingConditions.Text,V.Screen.frmWindMachine_Extra!txtCustomerBlockLetter.Text,V.Screen.frmWindMachine_Extra!txtElectricMotorMfg.Text,V.Screen.frmWindMachine_Extra!txtElectricMotorRPM.Text,V.Screen.frmWindMachine_Extra!txtComments.Text,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.EndSelect
+		
+		F.Intrinsic.Control.UnBlockEvents
+		
+		F.Intrinsic.Control.CallSub(frmWindMachine_UnLoad)
+		F.Intrinsic.Control.CallSub(LoadData_WindMachines)
+		Gui.frmMain..SetFocus
+		
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmWindMachine_SaveAllButtonClick.End
+
+Program.Sub.frmWindMachine_Extra_SaveButtonClick.Start
+	Gui.frmWindMachine_Extra..Visible(False)
+	Gui.frmWindMachine..Visible(True)
+	Gui.frmWindMachine..SetFocus
+	
+Program.Sub.frmWindMachine_Extra_SaveButtonClick.End
+
+Program.Sub.GetNextMachineID.Start
+	V.Local.sSQL.Declare
+	V.Local.iRet.Declare
+	F.Intrinsic.Control.Try
+		F.Intrinsic.String.Build("SELECT TOP 1 MACHINEID+1 FROM GCG_5849_{0} ORDER BY MACHINEID DESC",V.Args.sTable,V.Local.sSQL)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet,<=,0)
+			V.Local.iRet.Set(1)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Variable.AddRV("iNextMachineID",V.Local.iRet)
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GetNextMachineID.End
+
+Program.Sub.GsGCShakers_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iMachineID.Declare
+		V.Local.sSQL.Declare
+		V.Local.sDeleteConfirm.Declare
+	
+		Gui.frmMain.GsGCShakers.GetCellValueByColumnName("GVShakers","Machine ID",V.Args.RowIndex,V.Local.iMachineID)
+		
+		f.Intrinsic.Control.BlockEvents
+		
+		F.Intrinsic.Control.SelectCase(V.Args.Column)
+			F.Intrinsic.Control.Case("^Edit")
+				'Load Data into the Shaker form for editing and set sMODE to edit so that when save is clicked, we know to UPDATE, not insert.
+				V.Global.sMode.Set("EDIT")
+				F.Intrinsic.String.Build("select * from GCG_5849_TREE_SHAKER where MACHINEID='{0}'",V.Local.iMachineID,V.Local.sSQL)
+				F.ODBC.Connection!con.OpenLocalRecordsetRO("rs",V.Local.sSQL)
+				F.Intrinsic.Control.DoUntil(V.ODBC.con!rs.EOF)
+					Gui.frmShaker.txtMachineID.Text(V.ODBC.con!rs.FieldValLong!MACHINEID)
+					Gui.frmShaker.txtCustomer.Text(V.ODBC.con!rs.FieldValTrim!CUSTOMER)
+					Gui.frmShaker.txtCustomerName.Text(V.ODBC.con!rs.FieldVal!CUSTOMER_NAME)
+					Gui.frmShaker.txtGrower.Text(V.ODBC.con!rs.FieldValTrim!GROWER)
+					Gui.frmShaker.txtStreetAddress.Text(V.ODBC.con!rs.FieldValTrim!STREET)
+					Gui.frmShaker.txtCity.Text(V.ODBC.con!rs.FieldValTrim!CITY)
+					Gui.frmShaker.ddlState.Text(V.ODBC.con!rs.FieldValTrim!STATE)
+					Gui.frmShaker.txtZipCode.Text(V.ODBC.con!rs.FieldValTrim!ZIP_CODE)
+					Gui.frmShaker.txtPhone.Text(V.ODBC.con!rs.FieldValTrim!PHONE)
+					Gui.frmShaker.txtContractNumber.Text(V.ODBC.con!rs.FieldValTrim!CONTRACT_NUMBER)
+					Gui.frmShaker.txtTaxCode.Text(V.ODBC.con!rs.FieldValLong!TAX_CODE)
+					Gui.frmShaker.txtNutType.Text(V.ODBC.con!rs.FieldValTrim!NUT_TYPE)
+					Gui.frmShaker.txtMachineType.Text(V.ODBC.con!rs.FieldValTrim!MACHINE_TYPE)
+					Gui.frmShaker.dtpServiced.Value(V.ODBC.con!rs.FieldValPervasiveDate!SERVICED)
+					Gui.frmShaker.txtBrand.Text(V.ODBC.con!rs.FieldValTrim!BRAND)
+					Gui.frmShaker.txtTachHours.Text(V.ODBC.con!rs.FieldValTrim!TACH_HOURS)
+					Gui.frmShaker.txtMachineNumber.Text(V.ODBC.con!rs.FieldValTrim!MACHINE_NUMBER)
+					Gui.frmShaker.txtServiceType.Text(V.ODBC.con!rs.FieldValTrim!SERVICE_TYPE)
+					Gui.frmShaker.txtEngineType.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_TYPE)
+					Gui.frmShaker.txtMachineUse.Text(V.ODBC.con!rs.FieldValTrim!MACH_USE)
+					Gui.frmShaker.txtEngineNumber.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_NUMBER)
+					Gui.frmShaker.txtContactName.Text(V.ODBC.con!rs.FieldValTrim!CONTACT)
+					Gui.frmShaker.txtContactStreet.Text(V.ODBC.con!rs.FieldValTrim!CONTACT_STREET)
+					Gui.frmShaker.txtContactCity.Text(V.ODBC.con!rs.FieldValTrim!CONTACT_CITY)
+					Gui.frmShaker.ddlContactState.Text(V.ODBC.con!rs.FieldValTrim!CONTACT_STATE)
+					Gui.frmShaker.txtContactZipCode.Text(V.ODBC.con!rs.FieldValTrim!CONTACT_ZIP_CODE)
+					Gui.frmShaker.txtContactPhone.Text(V.ODBC.con!rs.FieldValTrim!CONTACT_PHONE_NUMBER)
+					Gui.frmShaker.chkAirCab.Value(V.ODBC.con!rs.FieldVal!AIR_CAB)
+					Gui.frmShaker.chkRotarySweeps.Value(V.ODBC.con!rs.FieldVal!ROTARY_SWEEPS)
+					Gui.frmShaker.txtHeadStyle.Text(V.ODBC.con!rs.FieldVal!HEAD_STYLE)
+					Gui.frmShaker.chkHydraulicUpdates.Value(V.ODBC.con!rs.FieldVal!HYDRAULIC_UPDATES)
+					Gui.frmShaker.ddlFWOFormat.Text(V.ODBC.con!rs.FieldValTrim!FWO_FORMAT)
+					Gui.frmShaker.chkHydrashake.Value(V.ODBC.con!rs.FieldVal!HYDRASHAKE)
+					Gui.frmShaker.txtComments.Text(V.ODBC.con!rs.FieldValTrim!COMMENTS)
+					F.Intrinsic.Control.ExitDo
+				F.Intrinsic.Control.Loop
+				F.ODBC.con!rs.Close
+				gui.frmShaker.lbl1.Visible(True)
+				gui.frmShaker.txtMachineID.Visible(True)
+				Gui.frmShaker..Visible(True)
+				Gui.frmShaker..SetFocus
+				Gui.frmShaker.txtCustomerName.SetFocus
+			F.Intrinsic.Control.Case("^Delete")
+				Gui.frmDeleteConfirm.lblForm.Caption("TREE_SHAKER")
+				Gui.frmDeleteConfirm.lblMachineID.Caption(V.Local.iMachineID)
+				Gui.frmDeleteConfirm..Visible(True)
+		F.Intrinsic.Control.EndSelect
+		
+		f.Intrinsic.Control.UnBlockEvents
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCShakers_RowCellClick.End
+
+Program.Sub.GsGCWindMachines_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iMachineID.Declare
+		V.Local.sSQL.Declare
+	
+		Gui.frmMain.GsGCWindMachines.GetCellValueByColumnName("GVWindMachines","Machine ID",V.Args.RowIndex,V.Local.iMachineID)
+		
+		f.Intrinsic.Control.BlockEvents
+		
+		F.Intrinsic.Control.SelectCase(V.Args.Column)
+			F.Intrinsic.Control.Case("^Edit")
+				'Load Data into the Wind Machine form for editing and set sMODE to edit so that when save is clicked, we know to UPDATE, not insert.
+				V.Global.sMode.Set("EDIT")
+				
+				F.Intrinsic.String.Build("select A.*, B.* from GCG_5849_WIND_MACHINE A LEFT OUTER JOIN GCG_5849_MACHINE_EXTRA B ON A.MACHINEID=B.MACHINEID where A.MACHINEID='{0}'",V.Local.iMachineID,V.Local.sSQL)
+				F.ODBC.Connection!con.OpenLocalRecordsetRO("rs",V.Local.sSQL)
+				F.Intrinsic.Control.DoUntil(V.ODBC.con!rs.EOF)
+					Gui.frmWindMachine.txtMachineID.Text(V.ODBC.con!rs.FieldValLong!MACHINEID)
+					Gui.frmWindMachine.txtCustomer.Text(V.ODBC.con!rs.FieldValTrim!CUSTOMER)
+					Gui.frmWindMachine.txtOrchard.Text(V.ODBC.con!rs.FieldValTrim!ORCHARD)
+					Gui.frmWindMachine.txtCustomerName.Text(V.ODBC.con!rs.FieldVal!CUSTOMER_NAME)
+					Gui.frmWindMachine.txtGrower.Text(V.ODBC.con!rs.FieldValTrim!GROWER)
+					Gui.frmWindMachine.txtStreetAddress.Text(V.ODBC.con!rs.FieldValTrim!STREET)
+					Gui.frmWindMachine.txtCity.Text(V.ODBC.con!rs.FieldValTrim!CITY)
+					Gui.frmWindMachine.ddlState.Text(V.ODBC.con!rs.FieldValTrim!STATE)
+					Gui.frmWindMachine.txtZipCode.Text(V.ODBC.con!rs.FieldValTrim!ZIP_CODE)
+					Gui.frmWindMachine.txtPhone.Text(V.ODBC.con!rs.FieldValTrim!PHONE)
+					Gui.frmWindMachine.txtContractNumber.Text(V.ODBC.con!rs.FieldValTrim!CONTRACT_NUMBER)
+					Gui.frmWindMachine.txtArea.Text(V.ODBC.con!rs.FieldValTrim!AREA)
+					Gui.frmWindMachine.txtMachineNumber.Text(V.ODBC.con!rs.FieldValTrim!MACHINE_NUMBER)
+					Gui.frmWindMachine.txtBladeNumber.Text(V.ODBC.con!rs.FieldValTrim!BLADE_NUMBER)
+					Gui.frmWindMachine.txtTopBoxNumber.Text(V.ODBC.con!rs.FieldValTrim!TOP_BOX_NUMBER)
+					Gui.frmWindMachine.txtBottomNumber.Text(V.ODBC.con!rs.FieldValTrim!BOTTOM_NUMBER)
+					Gui.frmWindMachine.txtTowerNumber.Text(V.ODBC.con!rs.FieldValTrim!TOWER_NUMBER)
+					Gui.frmWindMachine.txtEngineNumber.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_NUMBER)
+					Gui.frmWindMachine.txtFruitType.Text(V.ODBC.con!rs.FieldValTrim!FRUIT_TYPE)
+					Gui.frmWindMachine.dtpInstalled.Value(V.ODBC.con!rs.FieldValPervasiveDate!INSTALLED)
+					Gui.frmWindMachine.dtpServiced.Value(V.ODBC.con!rs.FieldValPervasiveDate!SERVICED)
+					Gui.frmWindMachine.txtMachineType.Text(V.ODBC.con!rs.FieldValTrim!MACHINE_TYPE)
+					Gui.frmWindMachine.txtEngineType.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_TYPE)
+					Gui.frmWindMachine.txtFuelType.Text(V.ODBC.con!rs.FieldValTrim!FUEL_TYPE)
+					Gui.frmWindMachine.txtBrand.Text(V.ODBC.con!rs.FieldValTrim!BRAND)
+					Gui.frmWindMachine.txtServiceType.Text(V.ODBC.con!rs.FieldValTrim!SERVICE_TYPE)
+					Gui.frmWindMachine.txtTaxCode.Text(V.ODBC.con!rs.FieldValLong!TAX_CODE)
+					Gui.frmWindMachine.txtTilt.Text(V.ODBC.con!rs.FieldValTrim!TILT)
+					Gui.frmWindMachine.ddlFWOFormat.Text(V.ODBC.con!rs.FieldValTrim!FWO_FORMAT)
+					Gui.frmWindMachine.txtContourCut.Text(V.ODBC.con!rs.FieldValTrim!CONTOUR_CUT)
+					Gui.frmWindMachine.ddlRotation.Text(V.ODBC.con!rs.FieldValTrim!ROTATION)
+					Gui.frmWindMachine.chkExtendedWarranty.Value(V.ODBC.con!rs.FieldVal!EXT_WARRANTY)
+					Gui.frmWindMachine.chkAutoStart.Value(V.ODBC.con!rs.FieldVal!AUTO_START)
+					gui.frmWindMachine.ddlClutch.Text(V.ODBC.con!rs.FieldValTrim!CLUTCH)
+					Gui.frmWindMachine.txtLatitude.Text(V.ODBC.con!rs.FieldValTrim!LATTITUDE)
+					Gui.frmWindMachine.chkDogLeg.Value(V.ODBC.con!rs.FieldVal!DOG_LEG)
+					Gui.frmWindMachine.txtLongitude.Text(V.ODBC.con!rs.FieldValTrim!LONGITUDE)
+					Gui.frmWindMachine.txtModel.Text(V.ODBC.con!rs.FieldValTrim!MODEL)
+					Gui.frmWindMachine.ddlORSatCell.Text(V.ODBC.con!rs.FieldValTrim!OR_SAT_CELL)
+					Gui.frmWindMachine.dtpInstall.Value(V.ODBC.con!rs.FieldValPervasiveDate!INSTALL)
+					
+					Gui.frmWindMachine_Extra.txtMachineID.Text(V.ODBC.con!rs.FieldValLong!MACHINEID)
+					Gui.frmWindMachine_Extra.txtOrchardBlockNumber.Text(V.ODBC.con!rs.FieldValTrim!ORCHARD_BLOCK_NUMBER)
+					Gui.frmWindMachine_Extra.txtClosestRoadAccess.Text(V.ODBC.con!rs.FieldValTrim!CLOSEST_ROAD_ACCESS)
+					Gui.frmWindMachine_Extra.txtClosestAveAccess.Text(V.ODBC.con!rs.FieldValTrim!CLOSEST_AVE_ACCESS)
+					Gui.frmWindMachine_Extra.txtWMManufacture.Text(V.ODBC.con!rs.FieldValTrim!WM_MANUFACTURE)
+					Gui.frmWindMachine_Extra.txtWMModel.Text(V.ODBC.con!rs.FieldValTrim!WM_MODEL)
+					Gui.frmWindMachine_Extra.txtTypeOfTower.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_TOWER)
+					Gui.frmWindMachine_Extra.txtTypeOfFan.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_FAN)
+					Gui.frmWindMachine_Extra.txtTypeOfFanHub.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_FAN_HUB)
+					Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_FAN_ROTATION)
+					Gui.frmWindMachine_Extra.txtTypeOfTopHead.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_TOP_HEAD)
+					Gui.frmWindMachine_Extra.txtTypeOfTowerRotation.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_TOWER_ROTATION)
+					Gui.frmWindMachine_Extra.txtTypeOfBell.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_BELL)
+					Gui.frmWindMachine_Extra.txtTypeOfLowerGearbox.Text(V.ODBC.con!rs.FieldValTrim!TYPE_OF_LOWER_GEAR_BOX)
+					Gui.frmWindMachine_Extra.txtPowerCompMeterNum.Text(V.ODBC.con!rs.FieldValTrim!POWER_COMP_METER_NUM)
+					Gui.frmWindMachine_Extra.txtPowerCompPlantNum.Text(V.ODBC.con!rs.FieldValTrim!POWER_COMP_PLANT_NUM)
+					Gui.frmWindMachine_Extra.txtPowerCompName.Text(V.ODBC.con!rs.FieldValTrim!POWER_COMP_NAME)
+					Gui.frmWindMachine_Extra.txtEngineUsageHours.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_USAGE_HOURS)
+					Gui.frmWindMachine_Extra.txtEngineHorsepower.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_HORSEPOWER)
+					Gui.frmWindMachine_Extra.txtEngineTiming.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_TIMING)
+					Gui.frmWindMachine_Extra.txtEngineVacuum.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_VACUUM)
+					Gui.frmWindMachine_Extra.txtEngineDwell.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_DWELL)
+					Gui.frmWindMachine_Extra.txtEngineRPM.Text(V.ODBC.con!rs.FieldValTrim!ENGINE_RPM)
+					Gui.frmWindMachine_Extra.txtCustomerMachineNumber.Text(V.ODBC.con!rs.FieldValTrim!CUST_MACH_NUMBER)
+					Gui.frmWindMachine_Extra.txtCustomerMachineLetter.Text(V.ODBC.con!rs.FieldValTrim!CUST_MACH_LETTER)
+					Gui.frmWindMachine_Extra.txtRotationMotorMfg.Text(V.ODBC.con!rs.FieldValTrim!ROTATION_MOTOR_MFG)
+					Gui.frmWindMachine_Extra.txtMeterCanMfg.Text(V.ODBC.con!rs.FieldValTrim!METER_CAN_MFG)
+					Gui.frmWindMachine_Extra.txtElectricPanelMfg.Text(V.ODBC.con!rs.FieldValTrim!ELECTRIC_PANEL_MFG)
+					Gui.frmWindMachine_Extra.txtHeadRotationTime.Text(V.ODBC.con!rs.FieldValTrim!HEAD_ROTATION_TIME)
+					Gui.frmWindMachine_Extra.chkTrackingGood.Value(V.ODBC.con!rs.FieldVal!TRACKING_GOOD)
+					Gui.frmWindMachine_Extra.chkPhaseMotorInstalled.Value(V.ODBC.con!rs.FieldVaL!PHASE_MOTOR_INSTALLED)
+					Gui.frmWindMachine_Extra.txtMotorFrameNumber.Text(V.ODBC.con!rs.FieldValTrim!MOTOR_FRAME_NUMBER)
+					Gui.frmWindMachine_Extra.txtL1Amp.Text(V.ODBC.con!rs.FieldValTrim!L1_AMP)
+					Gui.frmWindMachine_Extra.txtL2Amp.Text(V.ODBC.con!rs.FieldValTrim!L2_AMP)
+					Gui.frmWindMachine_Extra.txtL3Amp.Text(V.ODBC.con!rs.FieldValTrim!L3_AMP)
+					Gui.frmWindMachine_Extra.txtM1.Text(V.ODBC.con!rs.FieldValTrim!M1)
+					Gui.frmWindMachine_Extra.txtM2.Text(V.ODBC.con!rs.FieldValTrim!M2)
+					Gui.frmWindMachine_Extra.txtM3.Text(V.ODBC.con!rs.FieldValTrim!M3)
+					Gui.frmWindMachine_Extra.txtKeyNumber.Text(V.ODBC.con!rs.FieldValTrim!KEY_NUMBER)
+					Gui.frmWindMachine_Extra.txtDrivingConditions.Text(V.ODBC.con!rs.FieldValTrim!DRIVING_CONDITIONS)
+					Gui.frmWindMachine_Extra.txtCustomerBlockLetter.Text(V.ODBC.con!rs.FieldValTrim!CUSTOMER_BLOCK_LETTER)
+					Gui.frmWindMachine_Extra.txtElectricMotorMfg.Text(V.ODBC.con!rs.FieldValTrim!ELE_MOTOR_MFG)
+					Gui.frmWindMachine_Extra.txtElectricMotorRPM.Text(V.ODBC.con!rs.FieldValTrim!ELE_MOTOR_RPM)
+					Gui.frmWindMachine_Extra.txtComments.Text(V.ODBC.con!rs.FieldValTrim!COMMENTS)
+					
+					F.Intrinsic.Control.ExitDo
+				F.Intrinsic.Control.Loop
+				F.ODBC.con!rs.Close
+				gui.frmWindMachine.lbl1.Visible(True)
+				gui.frmWindMachine.txtMachineID.Visible(True)
+				Gui.frmWindMachine..Visible(True)
+				Gui.frmWindMachine..SetFocus
+				Gui.frmWindMachine.txtCustomerName.SetFocus
+			F.Intrinsic.Control.Case("^Delete")
+				Gui.frmDeleteConfirm.lblForm.Caption("WIND_MACHINE")
+				Gui.frmDeleteConfirm.lblMachineID.Caption(V.Local.iMachineID)
+				Gui.frmDeleteConfirm..Visible(True)
+		F.Intrinsic.Control.EndSelect
+		
+		f.Intrinsic.Control.UnBlockEvents
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCWindMachines_RowCellClick.End
+
+Program.Sub.frmWindMachine_UserButtonClicked.Start
+	F.Intrinsic.Control.If(V.Global.sMode.UCase,=,"ADD")
+		F.Intrinsic.UI.Msgbox("Must finish saving this record first.")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Button)
+		F.Intrinsic.Control.Case("WindMachineExtra")
+			Gui.frmWindMachine..Visible(False)
+			Gui.frmWindMachine_Extra..Visible(True)
+			Gui.frmWindMachine_Extra..SetFocus
+			Gui.frmWindMachine_Extra.txtOrchardBlockNumber.SetFocus
+	F.Intrinsic.Control.EndSelect
+Program.Sub.frmWindMachine_UserButtonClicked.End
+
+Program.Sub.LoadStates.Start
+	F.Intrinsic.Control.CallSub(LoadDictionary,"sDictionaryName","dicState","sDictionaryValues","AL*!*AK*!*AZ*!*AR*!*CA*!*CO*!*CT*!*DE*!*FL*!*GA*!*HI*!*ID*!*IL*!*IN*!*IA*!*KS*!*KY*!*LA*!*ME*!*MD*!*MA*!*MI*!*MN*!*MS*!*MO*!*MT*!*NE*!*NV*!*NH*!*NJ*!*NM*!*NY*!*NC*!*ND*!*OH*!*OK*!*OR*!*PA*!*RI*!*SC*!*SD*!*TN*!*TX*!*UT*!*VT*!*VA*!*WA*!*WV*!*WI*!*WY*!*DC*!*MH")
+	Gui.frmShaker.ddlState.AddItems("Dictionary",V.Args.sDictionaryName)
+	Gui.frmShaker.ddlContactState.AddItems("Dictionary",V.Args.sDictionaryName)
+	Gui.frmWindMachine.ddlState.AddItems("Dictionary",V.Args.sDictionaryName)
+Program.Sub.LoadStates.End
+
+Program.Sub.LoadRotation.Start
+	F.Intrinsic.Control.CallSub(LoadDictionary,"sDictionaryName","dicRotation","sDictionaryValues","CC*!*ST")
+	Gui.frmWindMachine.ddlRotation.AddItems("Dictionary",V.Args.sDictionaryName)
+	Gui.frmWindMachine_Extra.ddlTypeOfFanRotation.AddItems("Dictionary",V.Args.sDictionaryName)
+Program.Sub.LoadRotation.End
+Program.Sub.LoadAutoStart.Start
+	F.Intrinsic.Control.CallSub(LoadDictionary,"sDictionaryName","dicAutoStart","sDictionaryValues","C*!*D*!* ")
+	gui.frmWindMachine.ddlClutch.AddItems("Dictionary",V.Args.sDictionaryName)
+Program.Sub.LoadAutoStart.End
+
+Program.Sub.LoadORSatCell.Start
+	F.Intrinsic.Control.CallSub(LoadDictionary,"sDictionaryName","dicORSatCell","sDictionaryValues","S*!*C*!* ")
+	Gui.frmWindMachine.ddlORSatCell.AddItems("Dictionary",V.Args.sDictionaryName)
+Program.Sub.LoadORSatCell.End
+
+Program.Sub.LoadFWO.Start
+	F.Intrinsic.Control.CallSub(LoadDictionary,"sDictionaryName","dicFWO","sDictionaryValues","A*!*B*!*C*!*D*!*E*!*F")
+	Gui.frmShaker.ddlFWOFormat.AddItems("Dictionary",V.Args.sDictionaryName)
+	Gui.frmWindMachine.ddlFWOFormat.AddItems("Dictionary",V.Args.sDictionaryName)
+Program.Sub.LoadFWO.End
+
+Program.Sub.LoadDictionary.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.iCnt.Declare
+		V.Local.sDicName.Declare
+		V.Local.sDicValues.Declare
+		V.Local.sDicName.Set(V.Args.sDictionaryName)
+		V.Local.sDicValues.Set(V.Args.sDictionaryValues)
+		F.Data.Dictionary.Create(V.Local.sDicName)
+		F.Intrinsic.String.Split(V.Local.sDicValues,"*!*",V.Local.sDicValues)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sDicValues.UBound)
+			F.Data.Dictionary.AddItem(V.Local.sDicName,V.Local.iCnt,V.Local.sDicValues(V.Local.iCnt))
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Intrinsic.Variable.AddRV("sDictionaryName",V.Local.sDicName)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDictionary.End
+
+Program.Sub.frmDeleteConfirm_SelectionMade.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.sSQL.Declare
+		F.Intrinsic.Control.If(V.Args.ResultString,=,"YES")
+			F.Intrinsic.String.Build("delete from GCG_{2}_{1} where MACHINEID='{0}'",V.Screen.frmDeleteConfirm!lblMachineID.Caption,V.Screen.frmDeleteConfirm!lblForm.Caption,V.Global.iARCID,V.Local.sSQL)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Screen.frmDeleteConfirm!lblForm.Caption,=,"TREE_SHAKER")
+				'Refresh grid data...
+				F.Intrinsic.Control.CallSub(LoadData_Shakers)
+			F.Intrinsic.Control.Else
+				'Delete MACHINE_EXTRA record, too...
+				F.Intrinsic.String.Build("delete from GCG_{1}_MACHINE_EXTRA where MACHINEID='{0}'",V.Screen.frmDeleteConfirm!lblMachineID.Caption,V.Global.iARCID,V.Local.sSQL)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				'Refresh grid data...
+				F.Intrinsic.Control.CallSub(LoadData_WindMachines)
+			F.Intrinsic.Control.EndIf
+			Gui.frmDeleteConfirm.lblMachineID.Caption("")
+			Gui.frmDeleteConfirm.lblForm.Caption("")
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmDeleteConfirm_SelectionMade.End
+
+Program.Sub.CheckDatabase.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+		V.Local.bTableExists1.Declare
+		V.Local.bTableExists2.Declare
+		V.Local.bTableExists3.Declare
+		
+		F.Intrinsic.UI.InvokeWaitDialog("Checking the database...")
+		
+		F.ODBC.Connection!con.TableExists("GCG_5849_TREE_SHAKER",V.Local.bTableExists1)
+		F.ODBC.Connection!con.TableExists("GCG_5849_WIND_MACHINE",V.Local.bTableExists2)
+		F.ODBC.Connection!con.TableExists("GCG_5849_TREE_SHAKER",V.Local.bTableExists3)
+		
+		F.Intrinsic.Control.If(V.Local.bTableExists1)
+			F.Intrinsic.Control.If(V.Local.bTableExists2)
+				F.Intrinsic.Control.If(V.Local.bTableExists3)
+					'All tables exist...  exit.
+					F.Intrinsic.UI.CloseWaitDialog
+					F.Intrinsic.Control.ExitSub
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.UI.ChangeWaitStatus("Setting up the database...")
+		
+		F.Intrinsic.Control.If(V.Local.bTableExists1,=,False)
+			F.ODBC.Connection!con.Execute("CREATE TABLE GCG_5849_TREE_SHAKER ( MACHINEID NUMERIC(6,0) NOT NULL, CUSTOMER CHAR(6) NOT NULL, CUSTOMER_NAME CHAR(30) NOT NULL, GROWER CHAR(30) NOT NULL, STREET CHAR(30) NOT NULL, CITY CHAR(30) NOT NULL, STATE CHAR(20) NOT NULL, ZIP_CODE CHAR(5) NOT NULL, PHONE CHAR(10) NOT NULL, CONTRACT_NUMBER NUMERIC(6,0) NOT NULL, TAX_CODE NUMERIC(4,0) NOT NULL, NUT_TYPE CHAR(30) NOT NULL, MACHINE_TYPE CHAR(30) NOT NULL, SERVICED DATE NOT NULL, BRAND CHAR(30) NOT NULL, TACH_HOURS NUMERIC(8,0) NOT NULL, MACHINE_NUMBER CHAR(30) NOT NULL, SERVICE_TYPE CHAR(30) NOT NULL, ENGINE_TYPE CHAR(30) NOT NULL, MACH_USE CHAR(30) NOT NULL, ENGINE_NUMBER CHAR(30) NOT NULL, CONTACT CHAR(30) NOT NULL, CONTACT_STREET CHAR(30) NOT NULL, CONTACT_CITY CHAR(30) NOT NULL, CONTACT_STATE CHAR(20) NOT NULL, CONTACT_ZIP_CODE CHAR(5) NOT NULL, CONTACT_PHONE_NUMBER CHAR(10) NOT NULL, AIR_CAB BIT DEFAULT '0' NOT NULL, ROTARY_SWEEPS BIT DEFAULT '0' NOT NULL, HEAD_STYLE CHAR(30) NOT NULL, HYDRAULIC_UPDATES BIT DEFAULT '0' NOT NULL, FWO_FORMAT CHAR(1) NOT NULL, HYDRASHAKE BIT DEFAULT '0' NOT NULL, COMMENTS LONGVARCHAR NOT NULL );")
+			F.ODBC.Connection!con.Execute("CREATE UNIQUE NOT MODIFIABLE INDEX GCG_5849_TREE_SHAKER_I00 ON GCG_5849_TREE_SHAKER (MACHINEID);")
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Local.bTableExists2,=,False)
+			F.ODBC.Connection!con.Execute("CREATE TABLE GCG_5849_WIND_MACHINE(MACHINEID NUMERIC(6,0) NOT NULL ,CUSTOMER CHAR(6) NOT NULL ,ORCHARD CHAR(30) NOT NULL ,CUSTOMER_NAME CHAR(30) NOT NULL ,GROWER CHAR(30) NOT NULL ,STREET CHAR(30) NOT NULL ,CITY CHAR(30) NOT NULL ,STATE CHAR(20) NOT NULL ,ZIP_CODE CHAR(5) NOT NULL ,PHONE CHAR(10) NOT NULL ,CONTRACT_NUMBER CHAR(30) NOT NULL ,AREA CHAR(2) NOT NULL ,MACHINE_NUMBER CHAR(30) NOT NULL ,BLADE_NUMBER CHAR(30) NOT NULL ,TOP_BOX_NUMBER CHAR(30) NOT NULL ,BOTTOM_NUMBER CHAR(30) NOT NULL ,TOWER_NUMBER CHAR(30) NOT NULL ,ENGINE_NUMBER CHAR(30) NOT NULL ,FRUIT_TYPE CHAR(30) NOT NULL ,INSTALLED DATE NOT NULL ,SERVICED DATE NOT NULL ,MACHINE_TYPE CHAR(30) NOT NULL ,ENGINE_TYPE CHAR(30) NOT NULL ,FUEL_TYPE CHAR(30) NOT NULL ,BRAND CHAR(30) NOT NULL ,SERVICE_TYPE CHAR(30) NOT NULL ,TAX_CODE NUMERIC(4,0) NOT NULL ,TILT CHAR(30) NOT NULL ,FWO_FORMAT CHAR(1) NOT NULL ,CONTOUR_CUT CHAR(30) NOT NULL ,ROTATION CHAR(2) NOT NULL ,EXT_WARRANTY BIT DEFAULT '0' NOT NULL ,AUTO_START BIT DEFAULT '0' NOT NULL ,CLUTCH CHAR(1) NOT NULL ,LATTITUDE CHAR(30) NOT NULL ,DOG_LEG BIT DEFAULT '0' NOT NULL ,LONGITUDE CHAR(30) NOT NULL ,MODEL CHAR(30) NOT NULL ,OR_SAT_CELL CHAR(1) NOT NULL ,INSTALL DATE NOT NULL );")
+			F.ODBC.Connection!con.Execute("CREATE UNIQUE NOT MODIFIABLE INDEX GCG_5849_WIND_MACHINE_I00 ON GCG_5849_WIND_MACHINE(MACHINEID);")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.bTableExists3,=,False)
+			F.ODBC.Connection!con.Execute("CREATE TABLE GCG_5849_MACHINE_EXTRA (MACHINEID NUMERIC(6,0) NOT NULL ,ORCHARD_BLOCK_NUMBER CHAR(6) NOT NULL ,CLOSEST_ROAD_ACCESS CHAR(30) NOT NULL ,CLOSEST_AVE_ACCESS CHAR(30) NOT NULL ,WM_MANUFACTURE CHAR(30) NOT NULL ,WM_MODEL CHAR(30) NOT NULL ,TYPE_OF_TOWER CHAR(30) NOT NULL ,TYPE_OF_FAN CHAR(30) NOT NULL ,TYPE_OF_FAN_HUB CHAR(30) NOT NULL ,TYPE_OF_FAN_ROTATION CHAR(2) NOT NULL ,TYPE_OF_TOP_HEAD CHAR(30) NOT NULL ,TYPE_OF_TOWER_ROTATION CHAR(30) NOT NULL ,TYPE_OF_BELL CHAR(30) NOT NULL ,TYPE_OF_LOWER_GEAR_BOX CHAR(30) NOT NULL ,POWER_COMP_METER_NUM CHAR(30) NOT NULL ,POWER_COMP_PLANT_NUM CHAR(30) NOT NULL ,POWER_COMP_NAME CHAR(30) NOT NULL ,ENGINE_USAGE_HOURS NUMERIC(6,0) NOT NULL ,ENGINE_HORSEPOWER NUMERIC(4,0) NOT NULL ,ENGINE_TIMING NUMERIC(2,0) NOT NULL ,ENGINE_VACUUM NUMERIC(2,0) NOT NULL ,ENGINE_DWELL NUMERIC(2,0) NOT NULL ,ENGINE_RPM NUMERIC(4,0) NOT NULL ,CUST_MACH_NUMBER CHAR(30) NOT NULL ,CUST_MACH_LETTER CHAR(30) NOT NULL ,ROTATION_MOTOR_MFG CHAR(30) NOT NULL ,METER_CAN_MFG CHAR(30) NOT NULL ,ELECTRIC_PANEL_MFG CHAR(30) NOT NULL ,HEAD_ROTATION_TIME NUMERIC(4,0) NOT NULL ,TRACKING_GOOD BIT DEFAULT '0' NOT NULL ,PHASE_MOTOR_INSTALLED BIT DEFAULT '0' NOT NULL ,MOTOR_FRAME_NUMBER CHAR(30) NOT NULL ,L1_AMP NUMERIC(3,0) NOT NULL ,L2_AMP NUMERIC(3,0) NOT NULL ,L3_AMP NUMERIC(3,0) NOT NULL ,M1 NUMERIC(3,0) NOT NULL ,M2 NUMERIC(3,0) NOT NULL ,M3 NUMERIC(3,0) NOT NULL ,KEY_NUMBER CHAR(30) NOT NULL ,DRIVING_CONDITIONS CHAR(30) NOT NULL ,CUSTOMER_BLOCK_LETTER CHAR(30) NOT NULL ,ELE_MOTOR_MFG CHAR(30) NOT NULL ,ELE_MOTOR_RPM NUMERIC(4,0) NOT NULL ,COMMENTS LONGVARCHAR NOT NULL );")
+			F.ODBC.Connection!con.Execute("CREATE UNIQUE NOT MODIFIABLE INDEX GCG_5849_MACHINE_EXTRA_I00 ON GCG_5849_MACHINE_EXTRA(MACHINEID);")
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.UI.CloseWaitDialog
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.Control.CallSub(Catching,"Sub",V.Ambient.CurrentSubroutine,"ErrorNo",V.Ambient.ErrorNumber,"ErrorDesc",V.Ambient.ErrorDescription) 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckDatabase.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$jwithrow$}$20200428113317834$}$D95tSYIikIvF+oq+s87EtBQePACEH+EykwAUdA6q+nPoBOmp8M1ckKLrHla5RYVKNZCXm2J2EcwOA7le9OC4DA==
+Program.Sub.Comments.End
